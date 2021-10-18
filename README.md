@@ -7,7 +7,7 @@ Education platform for kids(7-10 years) which also tracks their face emotions wh
 
 We are interested in discovering children's behaviour and how they react to different situations such as when they win or lose at a game.
 
-  #### As a child-student #### 
+  #### As a kid #### 
   - You will be logged in using Face Recognition AI
   - You will have acccess to a given activity/game
   - Your facial emotions will be captured and identified by webcam 
