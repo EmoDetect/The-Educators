@@ -1,4 +1,4 @@
-# The-Educators
+# The Educators
 
 ## Cosmin Barzan & Tudor Moldovan
 
