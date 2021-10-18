@@ -1,6 +1,6 @@
-# The Educators
+<h1 align=center> 👨‍🏫 The Educators 👩‍🏫 </h1>
 
-## Cosmin Barzan & Tudor Moldovan
+<h2 align=center> Cosmin Barzan & Tudor Moldovan </h2>
 
 ### Overview ###
 Education platform for kids(7-10 years) which also tracks their face emotions when learning/playing with the use of facial recognition.
