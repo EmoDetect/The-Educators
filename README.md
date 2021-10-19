@@ -10,14 +10,18 @@ We are interested in discovering children's behaviour and how they react to diff
 
 #### As a kid
 
-- You will be logged in using Face Recognition AI
-- You will have acccess to a given activity/game
-- Your facial emotions will be captured and identified by webcam
-- _here still not sure about the activity/game we will choose_
+- You will be logged in using Face Recognition AI;
+- You will have acccess to a given activity/game;
+- Your facial emotions will be captured and identified by webcam;
+- During the gameplay you will be guided by audio & text messages;
 
 #### As an admin
 
-- You will login _????? (haven't decided yet how)_
-- You can access raports and statistics about each child reactions
+- You will be able to log in using default credentials;
+- You can access raports and statistics about each child reactions;
 
-[MORE COMING SOON]
+#### Tehnical Details ####
+
+- Information about users will be stored in a database;
+- An API will be used to recognize faces and emotions;
+- The Web Page will be built  using _HTML, CSS & vanilla JavaScript_;
