@@ -33,5 +33,5 @@ Registration Kids          |  Login Kids
 <img src="https://user-images.githubusercontent.com/91948472/138105801-0edbaf1e-5fb9-464b-a4f4-813b9848febd.png" width="500px" height="auto">  |  <img src="https://user-images.githubusercontent.com/91948472/138105825-7b95ee48-2c14-4266-b71f-52cf818b90ef.png" width="500px" height="auto"> 
 Login Educators           |  Homepage Kids
 <img src="https://user-images.githubusercontent.com/91948472/138105853-2e3cf4c7-aefd-4814-9bfd-9684635f66d0.png" width="500px" height="auto">  |  <img src="https://user-images.githubusercontent.com/91948472/138105899-2b735fc4-7892-4bcf-8eae-383dcc638c1a.png" width="500px" height="auto">
-                                                          Dashboard Educator
+                                                            Dashboard Educator
 <p align="center"><img src="https://user-images.githubusercontent.com/91948472/138105932-a454d2d7-0dcf-4693-a0a7-1516a347d1d1.png" width="500px" height="auto"></p>
