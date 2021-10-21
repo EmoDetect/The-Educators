@@ -44,8 +44,8 @@ We are interested in discovering children's behaviour and how they react to diff
 
 #### Tehnical Details ####
 
-- Information about users will be stored in a database;
-- An API will be used to recognize faces and emotions;
+- Information  will be stored in a [Firebase Database](https://firebase.google.com/);
+- [This Google API](https://cloud.google.com/vision/docs/detecting-faces) will be used to recognize faces and emotions; 
 - The Web Page will be built  using _HTML, CSS & vanilla JavaScript_;
 
 #### Preview ####
