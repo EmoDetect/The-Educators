@@ -23,13 +23,13 @@ We are interested in discovering children's behaviour and how they react to diff
 #### [Version 0] ####
 - Setup Firebase;
 - Pages layout implementation;
-- Implement access through webcam feature;
 - Test API Face Detection on mock photos;
 - *Access between pages without authentification required at this phase*
 
 #### [Version 1] ####
 - Game implementation;
 - Login & Register implementation;
+- Implement access through webcam feature;
 - Add default login credentials for educators;
 - Take a screenshot during the gameplay and save it in database;
 - Detect the emotions from the taken screenshot and save them in database;
