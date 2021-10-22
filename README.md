@@ -21,9 +21,9 @@ We are interested in discovering children's behaviour and how they react to diff
 - You can access raports and statistics about each child reactions;
 
 #### [Version 0] ####
+- Setup Firebase;
 - Pages layout implementation;
 - Implement access through webcam feature;
-- Setup Firebase;
 - Test API Face Detection on mock photos;
 - *Access between pages without authentification required at this phase*
 
