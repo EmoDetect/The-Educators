@@ -32,7 +32,7 @@ We are interested in discovering children's behaviour and how they react to diff
 - Implement access through webcam feature;
 - Add default login credentials for educators;
 - Take a screenshot during the gameplay and save it in database;
-- Detect the emotions from the taken screenshot and save them in database;
+- Identify the emotions from the taken screenshot and save them in database;
 
 #### [Version 2] ####
 -  Link data in the entire web application(between pages);
