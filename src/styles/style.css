@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fffdf7;
+  font-size: 1.4rem;
+}
+
+header h1 {
+  background-color: #6798c0;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGIN & REGISTRATION CHILDREN */
+
+.webcam-container {
+  height: 65vh;
+  background-color: #fffdf7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.webcam {
+  background-color: rgb(185, 177, 177);
+  margin-bottom: 4rem;
+  width: 40rem;
+  height: 30rem;
+}
+
+.registration-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #fdc921;
+  padding: 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-account {
+  height: 35vh;
+  background-color: #fffdf7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  background-color: #6798c0;
+  width: 120rem;
+  height: 18rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-container div {
+  background-color: rgb(185, 177, 177);
+  width: 15rem;
+  height: 13rem;
+}
+
+/* LOGIN EDUCATORS */
+
+.login-container {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #99d6ea;
+}
+
+.login-container label {
+  display: block;
+}
+
+/* HOMEPAGE GAME */
+.game-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  background-color: grey;
+}
+
+/* EDUCATORDASHBOARD.CSS */
+
+.statistics-container {
+  background-color: #fffdf7;
+  height: 80vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statistics-title {
+  margin-left: 3rem;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.statistics-container article {
+  background-color: #fdd85d;
+  height: 30rem;
+  width: 90rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.statistics-container article div {
+  background-color: lavenderblush;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51rem;
+  height: 17rem;
+}
+
+.statistics-container article img {
+  display: block;
+  background-color: lightsalmon;
+  width: 260px;
+  height: 170px;
+}
