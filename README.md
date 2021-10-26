@@ -31,7 +31,7 @@ We are interested in discovering children's behaviour and how they react to diff
 - Login & Register implementation;
 - Implement access through webcam feature;
 - Add default login credentials for educators;
-- Take a screenshot during the gameplay and save it in database;
+- Capture a photo during the gameplay and save it in database;
 - Identify the emotions from the taken screenshot and save them in database;
 
 #### [Version 2] ####
