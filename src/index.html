@@ -1,61 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Kids</title>
+    <link rel="stylesheet" href="./styles/style.css"/>
+  </head>
+  <body>
+    <header>
+      <!-- H1 / LOGO / BANNER for GAME NAME -->
+      <h1>GAME NAME</h1>
+    </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
-        integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
-</head>
+    <!-- Like registrationKids but without button, only face-detection based -->
+    <main>
+        <a href="./pages/homepage-kids/homepage-kids.html" class="pure-menu-link">Login</a>      
+      <section class="webcam-container">
+        <!-- WEBCAM IMPLEMENTATION -->
+        <video class="webcam"></video>
+      </section>
+    </main>
 
-<body>
-    <nav class="pure-menu pure-menu-horizontal">
-        <div>
-            <a href="/" class="pure-menu-heading pure-menu-link">Potato Page</a>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <a href="./pages/example-page-1/example-page-1.html" class="pure-menu-link">Page 1 example</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a href="./pages/example-page-1/example-page-1.html" class="pure-menu-link">Page 2 example</a>
-                </li>
-            </ul>
-        </div>
-        <button type="button" id="signout" class="button-warning pure-button">Sign Out</button>
-    </nav>
-
-    <div class="container">
-        <form class="add-new-items-form pure-form">
-            <fieldset>
-                <legend>Add new items<legend>
-                        <input class="item-title" type="text" placeholder="Title" />
-                        <input class="item-value" type="text" placeholder="Value" />
-                        <button type="submit" class="add-new-item pure-button pure-button-primary">Add new</button>
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="container">
-        <table style="width: 100%" class="example-table pure-table pure-table-horizontal">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <td colspan="100%" style="text-align: center;">Loading...</td>
-            </tbody>
-        </table>
-    </div>
+    <!-- Photos taken by webcam with other users of the platform -->
+    <footer class="footer-account">
+      <section class="footer-container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </footer>
 
     <!-- Main app -->
     <script type="module" src="./index.js"></script>
-</body>
-
+  </body>
 </html>
