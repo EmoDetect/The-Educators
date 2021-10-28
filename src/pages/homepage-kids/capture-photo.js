@@ -1,12 +1,14 @@
-let width = 320; // We will scale the photo width to this
-let height = 0; // This will be computed based on the input stream
+let width = 320; 
+let height = 0; 
 
 let streaming = false;
 
 let video = null;
 let canvas = null;
 
-let startup = () => {
+let encodedImage = null;
+
+let startup = async () => {
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
 
@@ -42,18 +44,26 @@ let startup = () => {
         }
     }, false);
 
-    let base64String = null;
+    let base64String = await waitForImage();
 
-    setTimeout(() => {
-        base64String = takepicture();
-        document.getElementsByClassName('contentarea')[0].classList.add('hide');
-        getEncodedImage(base64String);
-    }, 3000);
+    return base64String;
 }
 
-export const getEncodedImage = (encodedImage) => {
-    return encodedImage;
+const waitForImage = async () => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            let base64String = takepicture();
+            document.getElementsByClassName('contentarea')[0].classList.add('hide');
+            encodedImage = base64String;
+    
+            resolve(encodedImage);
+        }, 5000);
+    })
 }
+
+// export const getEncodedImage = (encodedImage) => {
+//     return encodedImage;
+// }
 
 const takepicture = () => {
     let context = canvas.getContext('2d');
@@ -70,4 +80,5 @@ const takepicture = () => {
     return base64String;
 }
 
-// export default getEncodedImage;
+
+export default startup;

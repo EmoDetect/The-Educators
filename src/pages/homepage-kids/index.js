@@ -1,3 +1,8 @@
-import {getEncodedImage} from "./capture-photo.js";
+import startup from './capture-photo.js';
 
-console.log(getEncodedImage());
+let encodedImage = null;
+
+startup().then(res => {
+    encodedImage = res;
+    console.log(res);
+});
