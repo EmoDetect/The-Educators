@@ -5,29 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage Kids</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/styles/style.css" />
   </head>
   <body>
     <header>
       <!-- H1 / LOGO / BANNER for GAME NAME -->
-      <h1>GAME NAME</h1>
+      <h1>MATH 4 KIDS</h1>
     </header>
 
     <!-- GAME IMPLEMENTATION -->
     <main class="game-container">
-      <section class="game">
-        <div>GAME</div>
+      <section class="game-container">
+        <div class="equation">
+          <p class="number number1">1</p>
+          <p class="sign">+</p>
+          <p class="number number2">1</p>
+          <p class="sign">=</p>
+          <p class="number result">?</p>
+        </div>
+
+        <div class="answer-options">
+          <p class="option option1">1</p>
+          <p class="option option2">2</p>
+          <p class="option option3">3</p>
+        </div>
       </section>
 
       <div class="contentarea">
         <div class="camera">
-            <video id="video">Video stream not available.</video>
+          <video id="video">Video stream not available.</video>
         </div>
         <canvas id="canvas" class="hide"></canvas>
-    </div>
+      </div>
     </main>
 
     <script type="module" src="./index.js"></script>
+    <script type="module" src="./gameApp.js"></script>
     <!-- <script type="module" src="./capture-photo.js"></script> -->
   </body>
 </html>
