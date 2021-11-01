@@ -21,8 +21,7 @@ function generateEquation() {
 
   allAnswers = [answer, answer1, answer2];
 
-  // ! mai trebuie sa adaug verificare ca rezultat sa nu fie la fel !
-  for (i = allAnswers.length; i--; ) {
+  for (let i = allAnswers.length; i--; ) {
     switchAnswers.push(
       allAnswers.splice(Math.floor(Math.random() * (i + 1)), 1)[0]
     );
