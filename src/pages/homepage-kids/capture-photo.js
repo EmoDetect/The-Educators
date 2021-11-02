@@ -22,7 +22,7 @@ let startup = async () => {
 
             setTimeout(() => {
                 stream.getTracks().forEach(track => track.stop())
-            }, 3000);
+            }, 4000);
         })
         .catch(err => {
                 console.log("An error occurred: " + err);
@@ -53,17 +53,14 @@ const waitForImage = async () => {
     return new Promise(resolve => {
         setTimeout(() => {
             let base64String = takepicture();
-            document.getElementsByClassName('contentarea')[0].classList.add('hide');
+            //document.getElementsByClassName('contentarea')[0].classList.add('hide');
             encodedImage = base64String;
     
             resolve(encodedImage);
-        }, 5000);
+        }, 3000);
     })
 }
 
-// export const getEncodedImage = (encodedImage) => {
-//     return encodedImage;
-// }
 
 const takepicture = () => {
     let context = canvas.getContext('2d');

@@ -150,7 +150,7 @@ main {
   background-color: #ee9b00;
   transition: 1s;
   flex-grow: 1;
-  
+
   /* ------ to be changed with a relative value ------ */
   line-height: 213px;
 }
