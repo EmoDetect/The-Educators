@@ -15,7 +15,7 @@ function generateEquation() {
   let switchAnswers = [];
 
   answer = number1 + number2;
-  console.log(number1, number2);
+  
   document.querySelector(".number1").innerHTML = number1;
   document.querySelector(".number2").innerHTML = number2;
 
