@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./login-style.css" />
   </head>
   <body>
+    <!-- login -->
     <div id="login_div" class="main-div">
       <h3>Login Educators</h3>
       <input type="email" placeholder="Email..." id="email_field" />
@@ -21,7 +22,17 @@
       <button onclick="logout()">Logout</button>
     </div>
 
+    <!-- register -->
+    <div id="register_div" class="main-div">
+      <h3>Register Kids</h3>
+      <input type="email" placeholder="Email..." id="email_field_register" />
+      <input type="password" placeholder="Password..." id="password_field_register" />
+      <button id="register_button">Register</button>
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
     
     <script>
       // Initialize Firebase
@@ -34,6 +45,11 @@
         appId: "1:761524655097:web:cfa638d34c2d2e9320e328",
       };
       firebase.initializeApp(config);
+
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+
+      // db.settings({ timestampsInSnapshots: true });
     </script>
 
     <script src="login.js"></script>

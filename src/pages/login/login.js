@@ -1,17 +1,14 @@
-firebase.auth().onAuthStateChanged(function (user) {
+firebase.auth().signOut();
+  firebase.auth().onAuthStateChanged(function (user) {
+    console.log("state changesd");
     if (user) {
-      // User is signed in.
-  
-      document.getElementById("user_div").style.display = "block";
-      document.getElementById("login_div").style.display = "none";
-  
-      const user = firebase.auth().currentUser;
-  
-      if (user != null) {
-        const email_id = user.email;
-        document.getElementById("user_para").innerHTML =
-          "Welcome User : " + email_id;
-      }
+      console.log(user);
+      //User is signed in.
+      db.collection('users').doc(user.uid).get().then(doc => {
+        if (doc.data().role === 'kid') {
+          window.location.href = "/src/pages/homepage-kids/homepage-kids.html"
+        }
+      });
     } else {
       // No user is signed in.
   
@@ -62,3 +59,27 @@ firebase.auth().onAuthStateChanged(function (user) {
       });
   }
   
+  
+  // register
+  const registerBtn = document.getElementById('register_button');
+  
+  registerBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+  
+      // get user info
+      const email = document.getElementById("email_field_register").value;
+      const password = document.getElementById("password_field_register").value;
+    
+      // sign up the user & add firestore data
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((cred) => {
+          console.log(cred);
+          return db.collection("users").doc(cred.uid).set({
+            role: 'kid',
+          });
+        })
+        .then(() => {
+          window.location.href = "/src/pages/homepage-kids/homepage-kids.html"
+        });
+  })
