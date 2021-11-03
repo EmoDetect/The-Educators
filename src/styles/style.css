@@ -24,6 +24,49 @@ body {
   flex-direction: column;
 }
 
+.logo {
+  line-height: 10vh;
+  padding-left: 2vw;
+}
+
+.logo a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 76vw;
+}
+
+.navigation {
+  align-self: flex-end;
+  margin-right: 2vw;
+}
+
+nav ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding-left: 2vw;
+  line-height: 10vh;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+header {
+  background-color: #6798c0;
+  height: 10vh;
+}
+
 header h1 {
   background-color: #6798c0;
   height: 10vh;

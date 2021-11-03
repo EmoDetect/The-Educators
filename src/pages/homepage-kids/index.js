@@ -33,3 +33,11 @@ document.querySelectorAll(".option").forEach((option) => {
     }
   });
 });
+
+const logoutButtonKid = document.getElementById('logout-kid');
+
+logoutButtonKid.addEventListener('click', () => {
+  console.log("try to logout...");
+  firebase.auth().signOut();
+  window.location.href = "/src/pages/login/login.html";
+})

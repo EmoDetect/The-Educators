@@ -8,6 +8,9 @@ firebase.auth().signOut();
         if (doc.data().role === 'kid') {
           window.location.href = "/src/pages/homepage-kids/homepage-kids.html"
         }
+        else {
+          window.location.href = "/src/pages/educator-dashboard/educator-dashboard.html"
+        }
       });
     } else {
       // No user is signed in.
