@@ -1,36 +1,34 @@
-
-const option1 = document.querySelector(".option1");
-const option2 = document.querySelector(".option2");
-const option3 = document.querySelector(".option3");
-let answer = 0;
+const option1 = document.querySelector('.option1');
+const option2 = document.querySelector('.option2');
+const option3 = document.querySelector('.option3');
 
 const generateEquation = () => {
-  let number1 = Math.trunc(Math.random() * 7) + 1;
-  let number2 = Math.trunc(Math.random() * 7) + 1;
-  let answer1 = Math.trunc(Math.random() * 7) + 1;
-  let answer2 = Math.trunc(Math.random() * 7) + 1;
+    let number1 = Math.trunc(Math.random() * 9) + 1;
+    let number2 = Math.trunc(Math.random() * 9) + 1;
 
-  let allAnswers = [];
-  let switchAnswers = [];
+    let answer = number1 + number2;
 
-  answer = number1 + number2;
-  
-  document.querySelector(".number1").innerHTML = number1;
-  document.querySelector(".number2").innerHTML = number2;
+    let allAnswers = [answer];
 
-  allAnswers = [answer, answer1, answer2];
+    while (allAnswers.length < 3) {
+        const newAnswer = Math.trunc(Math.random() * 9) + 1;
+        if (!allAnswers.includes(newAnswer)) {
+            allAnswers.push(newAnswer);
+        }
+    }
 
-  for (let i = allAnswers.length; i--; ) {
-    switchAnswers.push(
-      allAnswers.splice(Math.floor(Math.random() * (i + 1)), 1)[0]
-    );
-  }
+    let switchAnswers = [];
 
-  option1.innerHTML = switchAnswers[0];
-  option2.innerHTML = switchAnswers[1];
-  option3.innerHTML = switchAnswers[2];
+    document.querySelector('.number1').innerHTML = number1;
+    document.querySelector('.number2').innerHTML = number2;
 
-  return answer;
-}
+    switchAnswers = allAnswers.sort(() => Math.random() - 0.5);
+
+    option1.innerHTML = switchAnswers[0];
+    option2.innerHTML = switchAnswers[1];
+    option3.innerHTML = switchAnswers[2];
+
+    return answer;
+};
 
 export default generateEquation;
