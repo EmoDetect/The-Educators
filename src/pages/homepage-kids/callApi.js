@@ -25,11 +25,11 @@ const getEmotions = async (encodedImage) => {
   );
   
   const result = await res.json();
-  
-  const data = result.responses[0].faceAnnotations[0];
 
-  const emotions = {};
+  const data = result.responses[0].faceAnnotations[0];
   
+  const emotions = {};
+
   emotions.joyLikelihood = data.joyLikelihood;
   emotions.sorrowLikelihood = data.sorrowLikelihood;
   emotions.angerLikelihood = data.angerLikelihood;
