@@ -32,17 +32,23 @@
         <!-- Statistics KID 1 -->
         <article>
           <img src="/src/img/img1.jpg" alt="" />
-          <div>DATA 1</div>
+          <div id="data1">
+              <div id="joy"></div>
+              <div id="anger"></div>
+          </div>
         </article>
 
         <!-- Statistics KID 2 -->
         <article>
           <img src="/src/img/img2.jpg" alt="" />
-          <div>DATA 2</div>
+          <div id="data2">DATA 2</div>
         </article>
       </section>
     </main>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+
     <script>
       const config = {
         apiKey: "AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc",
@@ -53,6 +59,9 @@
         appId: "1:761524655097:web:cfa638d34c2d2e9320e328",
       };
       firebase.initializeApp(config);
+
+      const auth = firebase.auth();
+      const db = firebase.firestore();
     </script>
     <script src="./index.js"></script>
   </body>
