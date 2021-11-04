@@ -1,3 +1,32 @@
+const user = localStorage.getItem('user');
+
+const showRegisterForm = () => {
+  const loginForm = document.getElementById('login-div');
+  const registerForm = document.getElementById('register-div');
+
+  loginForm.style.display = 'none';
+  registerForm.style.display = 'block';
+}
+
+if(user === 'educator') {
+  const registerForm = document.getElementById('register-div');
+  const newAccountButton = document.getElementById('new-account');
+
+  const orText = document.getElementById('display-or-text');
+
+  orText.style.display = 'none';
+  registerForm.style.display = 'none';
+  newAccountButton.style.display = 'none';
+}
+else {
+  const registerForm = document.getElementById('register-div');
+
+  registerForm.style.display = 'none';
+
+  const newAccountButton = document.getElementById('new-account');
+
+}
+
 firebase.auth().signOut();
   firebase.auth().onAuthStateChanged(function (user) {
     console.log("state changesd");
@@ -15,8 +44,8 @@ firebase.auth().signOut();
     } else {
       // No user is signed in.
   
-      document.getElementById("user_div").style.display = "none";
-      document.getElementById("login_div").style.display = "block";
+      // document.getElementById("user_div").style.display = "none";
+      // document.getElementById("login_div").style.display = "block";
     }
   });
   
