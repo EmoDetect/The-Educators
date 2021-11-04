@@ -33,4 +33,5 @@ const generateEquation = () => {
   return answer;
 }
 
+
 export default generateEquation;
