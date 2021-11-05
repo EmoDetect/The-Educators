@@ -17,7 +17,7 @@ if (user === 'educator') {
     orText.style.display = 'none';
     registerForm.style.display = 'none';
     newAccountButton.style.display = 'none';
-} else {
+} else {.
     const registerForm = document.getElementById('register-div');
 
     registerForm.style.display = 'none';
@@ -29,7 +29,6 @@ firebase.auth().signOut();
 firebase.auth().onAuthStateChanged(function (user) {
     console.log('state changesd');
     if (user) {
-        console.log(user);
         //User is signed in.
         db.collection('users')
             .doc(user.uid)
@@ -70,26 +69,6 @@ function login() {
 
 function logout() {
     firebase.auth().signOut();
-}
-
-function createUser() {
-    getAuth()
-        .createUser({
-            email: 'user@example.com',
-            emailVerified: false,
-            phoneNumber: '+11234567890',
-            password: 'secretPassword',
-            displayName: 'John Doe',
-            photoURL: 'http://www.example.com/12345678/photo.png',
-            disabled: false
-        })
-        .then((userRecord) => {
-            // See the UserRecord reference doc for the contents of userRecord.
-            console.log('Successfully created new user:', userRecord.uid);
-        })
-        .catch((error) => {
-            console.log('Error creating new user:', error);
-        });
 }
 
 // register

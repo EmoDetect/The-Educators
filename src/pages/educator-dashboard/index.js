@@ -14,20 +14,24 @@ let data2 = document.getElementById('data2');
 let joy = document.getElementById('joy');
 let anger = document.getElementById('anger');
 
+const articleContainer = document.querySelector('.statistics-container');
+
 const getKids = async () => {
-    const snapshot = await firebase.firestore().collection('kidEmotions').get()
-    
-    /* 
-        array cu toate documentele din kidEmotions
-        array[i].id = id-ul
-        array[i].data() = obiectul emotions 
-    */
-    const res = snapshot.docs.map(doc => doc);
+    const snapshot = await firebase.firestore().collection('kidEmotions').get();
 
-    const elem = res[1];
-
-    joy.innerHTML = 'JoyLikelihood: ' + elem.data().emotion.joyLikelihood;
-    anger.innerHTML = 'AngerLikelihood: ' + elem.data().emotion.angerLikelihood;
-}
+    const res = snapshot.docs.map((doc) => doc);
+    res.forEach((element) => {
+        articleContainer.insertAdjacentHTML(
+            'beforeend',
+            `<article>
+        <img src="/src/img/img1.jpg" alt="" />
+        <div id="data1">
+            <div id="joy">${element.data().emotion.joyLikelihood}</div>
+            <div id="anger">${element.data().emotion.angerLikelihood}</div>
+        </div>
+      </article>`
+        );
+    });
+};
 
 getKids();
