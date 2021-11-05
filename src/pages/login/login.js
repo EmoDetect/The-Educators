@@ -17,7 +17,7 @@ if (user === 'educator') {
     orText.style.display = 'none';
     registerForm.style.display = 'none';
     newAccountButton.style.display = 'none';
-} else {.
+} else {
     const registerForm = document.getElementById('register-div');
 
     registerForm.style.display = 'none';
@@ -93,4 +93,13 @@ registerBtn.addEventListener('click', (event) => {
             window.location.href =
                 '/src/pages/homepage-kids/homepage-kids.html';
         });
+});
+
+// login with enter
+const passwordInput = document.getElementById('password_field');
+passwordInput.addEventListener('keyup', function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('login-button').click();
+    }
 });
