@@ -8,11 +8,11 @@ logoutButton.addEventListener('click', () => {
 
 const allKidsEmotions = {};
 
-let data1 = document.getElementById('data1');
-let data2 = document.getElementById('data2');
+// let data1 = document.getElementById('data1');
+// let data2 = document.getElementById('data2');
 
-let joy = document.getElementById('joy');
-let anger = document.getElementById('anger');
+// let joy = document.getElementById('joy');
+// let anger = document.getElementById('anger');
 
 const articleContainer = document.querySelector('.statistics-container');
 
@@ -25,7 +25,7 @@ const getKids = async () => {
             'beforeend',
             `<article>
         <img src="/src/img/img1.jpg" alt="" />
-        <div id="data1">
+        <div id="data">
             <div id="joy">${element.data().emotion.joyLikelihood}</div>
             <div id="anger">${element.data().emotion.angerLikelihood}</div>
         </div>
