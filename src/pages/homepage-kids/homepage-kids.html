@@ -1,84 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage Kids</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/src/styles/style.css" />
-  </head>
-  <body>
-    <header>
-      <!-- H1 / LOGO / BANNER for GAME NAME -->
-      <!-- <h1>MATH 4 KIDS</h1> -->
-      <nav>
-        <div class="logo">
-          <a href="#">LOGO</a>
-        </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Homepage Kids</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/src/styles/style.css" />
+    </head>
+    <body>
+        <header>
+            <!-- H1 / LOGO / BANNER for GAME NAME -->
+            <!-- <h1>MATH 4 KIDS</h1> -->
+            <nav>
+                <div class="logo">
+                    <a href="#">LOGO</a>
+                </div>
 
-        <div class="navigation">
-          <ul>
-            <li id="back-to-games">Back to games</li>
-            <li id="logout-kid">Logout</li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+                <div class="navigation">
+                    <ul>
+                        <li id="back-to-games">Back to games</li>
+                        <li id="logout-kid">Logout</li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-    <!-- GAME IMPLEMENTATION -->
-    <main>
-      <section class="game-container">
-        <div class="equation">
-          <p class="number number1">1</p>
-          <p class="sign">+</p>
-          <p class="number number2">1</p>
-          <p class="sign">=</p>
-          <p class="number result">?</p>
-        </div>
+        <!-- GAME IMPLEMENTATION -->
+        <main>
+            <section class="game-container">
+                <div class="equation">
+                    <p class="number number1">1</p>
+                    <p class="sign">+</p>
+                    <p class="number number2">1</p>
+                    <p class="sign">=</p>
+                    <p class="number result">?</p>
+                </div>
 
-        <div class="answer-options">
-          <p class="option option1">1</p>
-          <p class="option option2">2</p>
-          <p class="option option3">3</p>
-        </div>
-      </section>
+                <div class="answer-options">
+                    <p class="option option1">1</p>
+                    <p class="option option2">2</p>
+                    <p class="option option3">3</p>
+                </div>
+            </section>
 
-      <div class="contentarea hide">
-        <div class="camera">
-          <video id="video">Video stream not available.</video>
-        </div>
-        <canvas id="canvas" class="hide"></canvas>
-      </div>
-    </main>
+            <div class="contentarea hide">
+                <div class="camera">
+                    <video id="video">Video stream not available.</video>
+                </div>
+                <canvas id="canvas" class="hide"></canvas>
+            </div>
+        </main>
 
-    <audio id="try_again_audio">
-      <source src="/src/pages/homepage-kids/try_again.mp3" />
-    </audio>
+        <audio id="try_again_audio">
+            <source src="/src/pages/homepage-kids/try_again.mp3" />
+        </audio>
 
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
 
-    <script>
-      const config = {
-        apiKey: "AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc",
-        authDomain: "theeducators-ff916.firebaseapp.com",
-        projectId: "theeducators-ff916",
-        storageBucket: "theeducators-ff916.appspot.com",
-        messagingSenderId: "761524655097",
-        appId: "1:761524655097:web:cfa638d34c2d2e9320e328",
-        appName: "[DEFAULT]",
-      };
-      firebase.initializeApp(config);
+        <script>
+            const config = {
+                apiKey: 'AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc',
+                authDomain: 'theeducators-ff916.firebaseapp.com',
+                projectId: 'theeducators-ff916',
+                storageBucket: 'theeducators-ff916.appspot.com',
+                messagingSenderId: '761524655097',
+                appId: '1:761524655097:web:cfa638d34c2d2e9320e328',
+                appName: '[DEFAULT]'
+            };
+            firebase.initializeApp(config);
 
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-    </script>
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+        </script>
 
-    <script type="module" src="./index.js"></script>
-  </body>
+        <script type="module" src="./index.js"></script>
+    </body>
 </html>

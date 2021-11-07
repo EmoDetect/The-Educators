@@ -36,8 +36,9 @@ document.querySelectorAll('.option').forEach((option) => {
 
 const logoutButtonKid = document.getElementById('logout-kid');
 
-logoutButtonKid.addEventListener('click', () => {
+logoutButtonKid.addEventListener('click', (e) => {
     firebase.auth().signOut();
+
     window.location.href = '/src/pages/login/login.html';
 });
 
