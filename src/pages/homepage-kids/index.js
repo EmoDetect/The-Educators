@@ -36,8 +36,9 @@ document.querySelectorAll('.option').forEach((option) => {
 
 const logoutButtonKid = document.getElementById('logout-kid');
 
-logoutButtonKid.addEventListener('click', () => {
+logoutButtonKid.addEventListener('click', (e) => {
     firebase.auth().signOut();
+
     window.location.href = '/src/pages/login/login.html';
 });
 
@@ -48,6 +49,7 @@ const localStorageValue = JSON.parse(localStorage.getItem(localStorageApiKey));
 const userID = localStorageValue.uid;
 
 function saveEmotionDb(emotions) {
+    console.log('wokring');
     db.collection('kidEmotions').doc(userID).set({
         emotion: emotions
     });

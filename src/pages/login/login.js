@@ -29,7 +29,6 @@ firebase.auth().signOut();
 firebase.auth().onAuthStateChanged(function (user) {
     console.log('state changesd');
     if (user) {
-        console.log(user);
         //User is signed in.
         db.collection('users')
             .doc(user.uid)
@@ -72,26 +71,6 @@ function logout() {
     firebase.auth().signOut();
 }
 
-function createUser() {
-    getAuth()
-        .createUser({
-            email: 'user@example.com',
-            emailVerified: false,
-            phoneNumber: '+11234567890',
-            password: 'secretPassword',
-            displayName: 'John Doe',
-            photoURL: 'http://www.example.com/12345678/photo.png',
-            disabled: false
-        })
-        .then((userRecord) => {
-            // See the UserRecord reference doc for the contents of userRecord.
-            console.log('Successfully created new user:', userRecord.uid);
-        })
-        .catch((error) => {
-            console.log('Error creating new user:', error);
-        });
-}
-
 // register
 const registerBtn = document.getElementById('register_button');
 
@@ -114,4 +93,13 @@ registerBtn.addEventListener('click', (event) => {
             window.location.href =
                 '/src/pages/homepage-kids/homepage-kids.html';
         });
+});
+
+// login with enter
+const passwordInput = document.getElementById('password_field');
+passwordInput.addEventListener('keyup', function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('login-button').click();
+    }
 });
