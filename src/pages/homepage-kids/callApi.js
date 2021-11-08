@@ -27,6 +27,7 @@ const getEmotions = async (encodedImage) => {
     const result = await res.json();
 
     const data = result.responses[0].faceAnnotations[0];
+    console.log(data);
 
     const emotions = {};
 
@@ -35,6 +36,8 @@ const getEmotions = async (encodedImage) => {
     emotions.angerLikelihood = data.angerLikelihood;
     emotions.surpriseLikelihood = data.surpriseLikelihood;
     emotions.underExposedLikelihood = data.underExposedLikelihood;
+    emotions.detectionConfidence = data.detectionConfidence;
+    emotions.base64Img = encodedImage;
 
     return emotions;
 };
