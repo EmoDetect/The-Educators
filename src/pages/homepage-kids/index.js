@@ -66,7 +66,6 @@ function saveEmotionDb(emotion) {
                     .then(() => {
                         return doc.data().emotions;
                     });
-                // return doc.data().emotions;
             }
         })
         .then((emotionArray) => {
