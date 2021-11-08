@@ -48,9 +48,32 @@ const localStorageApiKey =
 const localStorageValue = JSON.parse(localStorage.getItem(localStorageApiKey));
 const userID = localStorageValue.uid;
 
-function saveEmotionDb(emotions) {
-    console.log('wokring');
-    db.collection('kidEmotions').doc(userID).set({
-        emotion: emotions
-    });
+async function getDBEmotions() {}
+
+function saveEmotionDb(emotion) {
+    db.collection('kidEmotions')
+        .doc(userID)
+        .get()
+        .then((doc) => {
+            if (doc.exists) {
+                return doc.data().emotions;
+            } else {
+                db.collection('kidEmotions')
+                    .doc(userID)
+                    .set({
+                        emotions: []
+                    })
+                    .then(() => {
+                        return doc.data().emotions;
+                    });
+                // return doc.data().emotions;
+            }
+        })
+        .then((emotionArray) => {
+            emotionArray.push(emotion);
+            console.log(emotionArray);
+            db.collection('kidEmotions').doc(userID).set({
+                emotions: emotionArray
+            });
+        });
 }

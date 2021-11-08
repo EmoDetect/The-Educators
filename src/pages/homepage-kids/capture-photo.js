@@ -8,7 +8,7 @@ let canvas = null;
 
 let encodedImage = null;
 
-let startup = async () => {
+export let startup = async () => {
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
 
@@ -65,7 +65,6 @@ const waitForImage = async () => {
         }, 3000);
     });
 };
-
 const takepicture = () => {
     let context = canvas.getContext('2d');
 
@@ -77,7 +76,6 @@ const takepicture = () => {
 
     const pictureDetails = 'data:image/png;base64,';
     const base64String = data.replace(pictureDetails, '');
-
     return base64String;
 };
 
