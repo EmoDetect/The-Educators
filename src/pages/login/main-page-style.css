@@ -46,29 +46,14 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 2rem;
+    background-color: #fff;
     color: black;
-    background-color: white;
-    text-align: center;
-    transition: all 0.2s;
-    margin-right: 1.2rem;
-    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-right: 2rem;
+    transition: background-color 0.5s ease;
 }
 
 .btn:hover {
-    background-color: #4095c6;
-    color: white;
+    background-color: #d3d3d3;
 }
-
-/* @media (max-width: 600px) {
-    body {
-        background: red;
-        width: 100%;
-    }
-} */

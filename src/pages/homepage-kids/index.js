@@ -7,6 +7,7 @@ let encodedImage = null;
 let nbOfClick = 0;
 
 const tryAgainAudio = document.getElementById('try_again_audio');
+const resultFromEcuation = document.querySelector('.result');
 
 let answer = generateEquation();
 
@@ -27,8 +28,17 @@ document.querySelectorAll('.option').forEach((option) => {
         nbOfClick++;
 
         if (event.target.textContent == answer) {
-            answer = generateEquation();
+            document.querySelector('.equation').style.backgroundColor = 'green';
+            setTimeout(() => {
+                answer = generateEquation();
+            }, 2000);
         } else {
+            document.querySelector('.equation').style.backgroundColor =
+                '#f94144';
+            setTimeout(() => {
+                document.querySelector('.equation').style.backgroundColor =
+                    'white';
+            }, 1000);
             tryAgainAudio.play();
         }
     });
@@ -47,8 +57,6 @@ const localStorageApiKey =
 
 const localStorageValue = JSON.parse(localStorage.getItem(localStorageApiKey));
 const userID = localStorageValue.uid;
-
-async function getDBEmotions() {}
 
 function saveEmotionDb(emotion) {
     db.collection('kidEmotions')

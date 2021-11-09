@@ -21,12 +21,15 @@ const generateEquation = () => {
 
     document.querySelector('.number1').innerHTML = number1;
     document.querySelector('.number2').innerHTML = number2;
+    // document.querySelector('.result').innerHTML = '?';
 
     switchAnswers = allAnswers.sort(() => Math.random() - 0.5);
 
     option1.innerHTML = switchAnswers[0];
     option2.innerHTML = switchAnswers[1];
     option3.innerHTML = switchAnswers[2];
+
+    document.querySelector('.equation').style.backgroundColor = 'white';
 
     return answer;
 };
