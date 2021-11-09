@@ -8,7 +8,7 @@ header{
     background-color: #008c99;
 }
 
-.container{
+.header-container{
     width: 100%;
     max-width: 120rem;
     margin: 0 auto;
@@ -34,6 +34,10 @@ header{
 .nav .logo{
     font-size: 3.5rem;
     font-weight: bold;
+}
+
+.header-container nav a img {
+    width: 100px;
 }
 
 .nav-list{
