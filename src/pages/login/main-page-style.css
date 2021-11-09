@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+html {
+    height: 100%;
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-img img {
+    position: absolute;
+    bottom: 0px;
+    right: 16px;
+}
+
+.motto {
+    font-family: 'Poppins';
+    font-size: 3rem;
+    width: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: black;
+    background-color: white;
+    text-align: center;
+    transition: all 0.2s;
+    margin-right: 1.2rem;
+}
+
+.btn:hover {
+    background-color: #4095c6;
+    color: white;
+}
