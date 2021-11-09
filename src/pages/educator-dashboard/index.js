@@ -22,7 +22,7 @@ const getKids = async () => {
     const res = snapshot.docs.map((doc) => doc);
     let i = 0;
     res.forEach((element) => {
-        if (i < 2) {
+        if (i < 3) {
             articleContainer.insertAdjacentHTML(
                 'beforeend',
                 `<article>
