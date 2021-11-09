@@ -4,8 +4,6 @@ html {
     height: 100%;
     background-image: url('background.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    /* background-position: center center; */
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -16,10 +14,17 @@ body {
     font-size: 1.4rem;
 }
 
-main {
+.container {
+    margin-top: 20rem;
+    margin-left: 10rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 700px;
+    background-color: #89c2d9;
+    opacity: 0.65;
+    border-radius: 3rem;
 }
 
 .slider-img img {
@@ -30,8 +35,13 @@ main {
 
 .motto {
     font-family: 'Poppins';
-    font-size: 3rem;
-    width: 40px;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    margin-bottom: 2rem;
 }
 
 .btn {
@@ -42,14 +52,23 @@ main {
     text-decoration: none;
     font-family: 'Roboto';
     font-weight: 300;
+    font-size: 2rem;
     color: black;
     background-color: white;
     text-align: center;
     transition: all 0.2s;
     margin-right: 1.2rem;
+    cursor: pointer;
 }
 
 .btn:hover {
     background-color: #4095c6;
     color: white;
 }
+
+/* @media (max-width: 600px) {
+    body {
+        background: red;
+        width: 100%;
+    }
+} */
