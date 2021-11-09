@@ -27,7 +27,6 @@ const getEmotions = async (encodedImage) => {
     const result = await res.json();
 
     const data = result.responses[0].faceAnnotations[0];
-    console.log(data);
 
     const emotions = {};
 

@@ -26,8 +26,8 @@ const getKids = async () => {
             `<article>
         <img src="/src/img/img1.jpg" alt="" />
         <div id="data">
-            <div id="joy">${element.data().emotion.joyLikelihood}</div>
-            <div id="anger">${element.data().emotion.angerLikelihood}</div>
+            <div id="joy">${element.data().emotions[0].joyLikelihood}</div>
+            <div id="anger">${element.data().emotions[0].angerLikelihood}</div>
         </div>
       </article>`
         );

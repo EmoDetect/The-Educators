@@ -25,9 +25,7 @@ if (user === 'educator') {
     const newAccountButton = document.getElementById('new-account');
 }
 
-firebase.auth().signOut();
 firebase.auth().onAuthStateChanged(function (user) {
-    console.log('state changesd');
     if (user) {
         //User is signed in.
         db.collection('users')
@@ -42,10 +40,6 @@ firebase.auth().onAuthStateChanged(function (user) {
                         '/src/pages/educator-dashboard/educator-dashboard.html';
                 }
             });
-    } else {
-        // No user is signed in.
-        // document.getElementById("user_div").style.display = "none";
-        // document.getElementById("login_div").style.display = "block";
     }
 });
 

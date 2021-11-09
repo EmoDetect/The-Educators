@@ -70,7 +70,6 @@ function saveEmotionDb(emotion) {
         })
         .then((emotionArray) => {
             emotionArray.push(emotion);
-            console.log(emotionArray);
             db.collection('kidEmotions').doc(userID).set({
                 emotions: emotionArray
             });

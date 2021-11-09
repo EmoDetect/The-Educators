@@ -76,6 +76,12 @@
 
             firebase.initializeApp(config);
 
+            firebase.auth().onAuthStateChanged(function (user) {
+              if (! user) {
+                window.location.href = "/src/pages/login/login.html";
+              }
+            });
+
             const auth = firebase.auth();
             const db = firebase.firestore();
         </script>
