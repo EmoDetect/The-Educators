@@ -10,8 +10,8 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/src/styles/style.css" />
-        <link rel="stylesheet" href="/src/styles/header.css">
-    
+        <link rel="stylesheet" href="/src/styles/header.css" />
+
         <style>
             main {
                 margin-top: 10vh;
@@ -22,12 +22,19 @@
         <header>
             <div class="header-container">
                 <nav class="nav">
-                    <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="logo">
-                        <img src="/src/img/logo1.png" alt="logo" >
+                    <a
+                        href="/src/pages/educator-dashboard/educator-dashboard.html"
+                        class="logo"
+                    >
+                        <img src="/src/img/logo1.png" alt="logo" />
                     </a>
                     <ul class="nav-list">
                         <li>
-                            <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="nav-link">Back to games</a>
+                            <a
+                                href="/src/pages/educator-dashboard/educator-dashboard.html"
+                                class="nav-link"
+                                >Back to games</a
+                            >
                         </li>
                     </ul>
                     <a href="#" id="nav-logout">Logout</a>
@@ -83,9 +90,9 @@
             firebase.initializeApp(config);
 
             firebase.auth().onAuthStateChanged(function (user) {
-              if (! user) {
-                window.location.href = "/src/pages/login/login.html";
-              }
+                if (!user) {
+                    window.location.href = '/src/pages/login/login.html';
+                }
             });
 
             const auth = firebase.auth();
