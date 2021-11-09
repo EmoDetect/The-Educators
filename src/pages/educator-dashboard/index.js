@@ -20,17 +20,21 @@ const getKids = async () => {
     const snapshot = await firebase.firestore().collection('kidEmotions').get();
 
     const res = snapshot.docs.map((doc) => doc);
+    let i = 0;
     res.forEach((element) => {
-        articleContainer.insertAdjacentHTML(
-            'beforeend',
-            `<article>
-        <img src="/src/img/img1.jpg" alt="" />
-        <div id="data">
-            <div id="joy">${element.data().emotions[0].joyLikelihood}</div>
-            <div id="anger">${element.data().emotions[0].angerLikelihood}</div>
-        </div>
-      </article>`
-        );
+        if (i < 2) {
+            articleContainer.insertAdjacentHTML(
+                'beforeend',
+                `<article>
+            <img src="data:image/png;base64,${element.data().emotions[0].base64Img}" alt="" />
+            <div id="data">
+                <div id="joy">${element.data().emotions[0].joyLikelihood}</div>
+                <div id="anger">${element.data().emotions[0].angerLikelihood}</div>
+            </div>
+        </article>`
+            );
+        }
+        i++;
     });
 };
 
