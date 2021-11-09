@@ -6,28 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Educator Dashboard</title>
         <link rel="stylesheet" href="/src/styles/style.css" />
+        <link rel="stylesheet" href="/src/styles/header.css">
     </head>
     <body>
         <header>
-            <!-- H1 / LOGO / BANNER for GAME NAME -->
-            <!-- <h1>GAME NAME</h1> -->
-            <nav>
-                <div class="logo">
-                    <a href="#">LOGO</a>
-                </div>
-
-                <div class="navigation">
-                    <ul>
-                        <li id="back-to-games">Back to games</li>
-                        <li id="logout-educator">Logout</li>
+            <div class="container">
+                <nav class="nav">
+                    <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="logo">Kidstage</a>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="nav-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#statistics-section" class="nav-link">Statistics</a>
+                        </li>
+                        <li>
+                            <a href="#overview-section" class="nav-link">Overview</a>
+                        </li>
                     </ul>
-                </div>
-            </nav>
+                    <a href="#" id="nav-logout">Logout</a>
+                </nav>
+            </div>
         </header>
 
         <main>
-            <section class="statistics-container">
+            <section id="statistics-section" class="statistics-container">
                 <h2 class="statistics-title">Statistics about children</h2>
+            </section>
+            <section id="overview-section">
+                <div class="overview-container"></div>
             </section>
         </main>
         <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -53,6 +60,12 @@
 
             const auth = firebase.auth();
             const db = firebase.firestore();
+
+            window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
         </script>
         <script src="./index.js"></script>
     </body>

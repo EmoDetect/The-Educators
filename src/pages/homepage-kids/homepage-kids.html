@@ -10,23 +10,29 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/src/styles/style.css" />
+        <link rel="stylesheet" href="/src/styles/header.css">
+    
+        <style>
+            main {
+                margin-top: 10vh;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <!-- H1 / LOGO / BANNER for GAME NAME -->
-            <!-- <h1>MATH 4 KIDS</h1> -->
-            <nav>
-                <div class="logo">
-                    <a href="#">LOGO</a>
-                </div>
-
-                <div class="navigation">
-                    <ul>
-                        <li id="back-to-games">Back to games</li>
-                        <li id="logout-kid">Logout</li>
+            <div class="container">
+                <nav class="nav">
+                    <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="logo">
+                        <img src="/src/img/logo1.png" alt="logo" >
+                    </a>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="nav-link">Back to games</a>
+                        </li>
                     </ul>
-                </div>
-            </nav>
+                    <a href="#" id="nav-logout">Logout</a>
+                </nav>
+            </div>
         </header>
 
         <!-- GAME IMPLEMENTATION -->

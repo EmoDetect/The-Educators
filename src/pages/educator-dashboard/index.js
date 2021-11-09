@@ -1,4 +1,4 @@
-const logoutButton = document.getElementById('logout-educator');
+const logoutButton = document.getElementById('nav-logout');
 
 logoutButton.addEventListener('click', () => {
     console.log('try to logout...');
