@@ -34,7 +34,7 @@ document.querySelectorAll('.option').forEach((option) => {
     });
 });
 
-const logoutButtonKid = document.getElementById('logout-kid');
+const logoutButtonKid = document.getElementById('nav-logout');
 
 logoutButtonKid.addEventListener('click', (e) => {
     firebase.auth().signOut();
