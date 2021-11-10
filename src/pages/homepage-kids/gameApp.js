@@ -21,7 +21,7 @@ const generateEquation = () => {
 
     document.querySelector('.number1').innerHTML = number1;
     document.querySelector('.number2').innerHTML = number2;
-    // document.querySelector('.result').innerHTML = '?';
+    document.querySelector('.result').innerHTML = '?';
 
     switchAnswers = allAnswers.sort(() => Math.random() - 0.5);
 

@@ -28,10 +28,11 @@ document.querySelectorAll('.option').forEach((option) => {
         nbOfClick++;
 
         if (event.target.textContent == answer) {
+            resultFromEcuation.innerHTML = answer;
             document.querySelector('.equation').style.backgroundColor = 'green';
             setTimeout(() => {
                 answer = generateEquation();
-            }, 2000);
+            }, 3000);
         } else {
             document.querySelector('.equation').style.backgroundColor =
                 '#f94144';
