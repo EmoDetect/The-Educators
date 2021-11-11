@@ -4,12 +4,19 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Homepage Kids</title>
+        <title>Math Game</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/src/img/faviconx.PNG"
+        />
         <link
             href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/src/styles/style.css" />
+        <link rel="stylesheet" href="/src/styles/homepage-kids.css" />
         <link rel="stylesheet" href="/src/styles/header.css" />
         <style>
             main {
@@ -28,12 +35,12 @@
                         href="/src/pages/educator-dashboard/educator-dashboard.html"
                         class="logo"
                     >
-                        <img src="/src/img/logo1.png" alt="logo" />
+                        <img src="/src/img/logo.png" alt="logo" />
                     </a>
                     <ul class="nav-list">
                         <li>
                             <a
-                                href="/src/pages/educator-dashboard/educator-dashboard.html"
+                                href="/src/pages/activities-list/activities.html"
                                 class="nav-link"
                                 >Back to games</a
                             >
@@ -64,6 +71,24 @@
                     <video id="video">Video stream not available.</video>
                 </div>
                 <canvas id="canvas" class="hide"></canvas>
+            </div>
+            <div class="slider-img">
+                <img
+                    width="350"
+                    height="400"
+                    src="/src/img/happy-kid-game.png"
+                    alt="slider"
+                    id="happyKidImage"
+                    class="kid"
+                />
+                <img
+                    width="350"
+                    height="400"
+                    src="/src/img/sad-kid-game.png"
+                    alt="slider"
+                    id="sadKidImage"
+                    class="kid"
+                />
             </div>
         </main>
         <audio id="try_again_audio">

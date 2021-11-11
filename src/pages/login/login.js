@@ -34,7 +34,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             .then((doc) => {
                 if (doc.data().role === 'kid') {
                     window.location.href =
-                        '/src/pages/homepage-kids/homepage-kids.html';
+                        '/src/pages/activities-list/activities.html';
                 } else {
                     window.location.href =
                         '/src/pages/educator-dashboard/educator-dashboard.html';
@@ -84,8 +84,7 @@ registerBtn.addEventListener('click', (event) => {
             });
         })
         .then(() => {
-            window.location.href =
-                '/src/pages/homepage-kids/homepage-kids.html';
+            window.location.href = '/src/pages/activities-list/activities.html';
         });
 });
 
