@@ -1,13 +1,13 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
 }
 
 :root {
-  --number-color: orangered;
-  --sign-color: indigo;
-  --game-font: "Fredoka One";
+    --number-color: #ffc300;
+    --sign-color: indigo;
+    --game-font: 'Fredoka One';
 }
 
 html {
@@ -22,49 +22,47 @@ body {
   height: 100%;
 }
 
-
-
 /* LOGIN & REGISTRATION CHILDREN */
 
 .webcam-container {
-  height: 65vh;
-  background-color: #fffdf7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    height: 65vh;
+    background-color: #fffdf7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .webcam {
-  background-color: rgb(185, 177, 177);
-  margin-bottom: 4rem;
-  width: 40rem;
-  height: 30rem;
+    background-color: rgb(185, 177, 177);
+    margin-bottom: 4rem;
+    width: 40rem;
+    height: 30rem;
 }
 
 .registration-button {
-  text-transform: uppercase;
-  font-weight: bold;
-  background-color: #fdc921;
-  padding: 2rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fdc921;
+    padding: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
 /* LOGIN EDUCATORS */
 
 .login-container {
-  width: 30rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #99d6ea;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #99d6ea;
 }
 
 .login-container label {
-  display: block;
+    display: block;
 }
 
 /* HOMEPAGE GAME */
@@ -79,82 +77,94 @@ main {
 }
 
 .game-container {
-  font-family: var(--game-font);
-  background-color: #99d98c;
-  display: grid;
-  grid-template-columns: 82% 18%;
-  flex-grow: 1;
+    margin-top: 2rem;
+    font-family: var(--game-font);
+    background-color: #457b9d;  
+    display: flex;
+    justify-content: center;
+    height: 50rem;
+    width: 80rem;
+    /* grid-template-columns: 72% 8%;
+    flex-grow: 1; */
 }
 
 .equation {
-  background-color: thistle;
-  font-size: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  margin: 10px;
+    background-color: #e5e5e5;
+    font-size: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin: 10px;
+    width: 70rem;
 }
 
 .equation .number {
-  color: var(--number-color);
+    color: var(--number-color);
 }
 
 .equation .sign {
-  color: var(--sign-color);
+    color: var(--sign-color);
 }
 
 .answer-options {
-  box-sizing: border-box;
-  font-size: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 6px;
-  margin: 10px;
+    box-sizing: border-box;
+    font-size: 6rem;
+    display: flex;
+    color: orangered;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    margin: 10px;
 }
 
 .answer-options p {
-  cursor: pointer;
-  text-align: center;
-  width: 100%;
-  border-radius: 6px;
-  margin-top: 10px;
-  background-color: #ee9b00;
-  transition: 1s;
-  flex-grow: 1;
-
-  /* ------ to be changed with a relative value ------ */
-  line-height: 213px;
+    cursor: pointer;
+    text-align: center;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #48bfe3 ;
+    transition: 1s;
+    flex-grow: 1;
+    line-height: 150px;
 }
 
 .answer-options p:first-child {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 .answer-options p:hover {
-  background-color: red;
+    background-color: #fcbf49;
 }
 
 /* EDUCATORDASHBOARD.CSS */
 
 
-
 /* style for take canvas to take a photo */
 
 #video {
-  border: 1px solid black;
-  width: 320px;
-  height: 240px;
+    border: 1px solid black;
+    width: 320px;
+    height: 240px;
 }
 
 .camera {
-  width: 340px;
-  display: inline-block;
+    width: 340px;
+    display: inline-block;
 }
 
 .contentarea {
-  font-size: 16px;
-  font-family: Arial;
-  text-align: center;
+    font-size: 16px;
+    font-family: Arial;
+    text-align: center;
+}
+
+/*Dashboard educator*/
+
+.overview-container {
+    background-color: #008c99;
+    width: 100%;
+    height: 30vh;
 }
