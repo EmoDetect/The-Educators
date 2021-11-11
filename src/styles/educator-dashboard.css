@@ -1,48 +1,49 @@
-  :root {
-    --confidence-percent: 0%;
-    --confidence-value: 0;
-  }
-  
-  .hide {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+:root {
+  --confidence-percent: 0%;
+  --confidence-value: 0;
+}
+
+.hide {
     display: none;
-  }
-  
-  #overview-section {
+}
+
+#overview-section {
     text-align: center;
     font-size: 20px;
     margin-top: 10vh;
-  }
-  
-  .overview-container {
+}
+
+.overview-container {
     background-color: #008c99;
     width: 100%;
     height: 30vh;
-  }
-  
-  #blank-section {
+}
+
+#blank-section {
     height: 20vh;
-  }
+}
 
+/*statistics container*/
 
-  /*statistics container*/
-
-  .statistics-container {
+.statistics-container {
     background-color: #fffdf7;
     height: auto;
     padding: 2rem;
     margin-top: 10rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .statistics-title {
+}
+
+.statistics-title {
     margin-left: 3rem;
     font-size: 3rem;
     margin-bottom: 6rem;
-  }
-  
-  .statistics-container article {
+}
+
+.statistics-container article {
     align-items: center;
     background-color: #e9ecef;
     width: 90rem;
@@ -50,9 +51,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 3rem;
-  }
-  
-  .statistics-container article #data {
+}
+
+.statistics-container article #data {
     border-radius: 3px;
     box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
     font-size: 1.6rem;
@@ -63,43 +64,51 @@
     justify-content: center;
     width: 51rem;
     height: 17rem;
-  }
-  
-  .statistics-container article img {
+}
+
+.statistics-container article img {
     border-radius: 3px;
     box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
     display: block;
     width: 260px;
     height: 170px;
-  }
+}
 
-  .emotion-row {
-      display: flex;
-      width: 80%;
-  }
+.show-statistics-container {
+    display: flex;
+}
 
-  .emotion-label {
-      width: 33.33%;
-  }
+.hide-loader {
+    display: none;
+}
 
-  .emotion-range {
+.emotion-row {
+    display: flex;
+    width: 80%;
+}
+
+.emotion-label {
     width: 33.33%;
-  }
+}
 
-  .emotion-value {
+.emotion-range {
     width: 33.33%;
-  }
+}
 
-  .squares {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      background-color: #eee;
-  }
+.emotion-value {
+    width: 33.33%;
+}
 
-  .active {
-      background-color: #008c99;
-  }
+.squares {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+}
+
+.active {
+    background-color: #008c99;
+}
 
 .statistics-container h2:after {
     position: absolute;
@@ -109,7 +118,7 @@
     width: 174px;
     height: 19px;
     background: url(/src/img/titleIcon.png);
-    content: "";
+    content: '';
 }
 
 .overview-container h2:after {
@@ -120,7 +129,7 @@
     width: 174px;
     height: 19px;
     background: url(/src/img/titleIcon.png);
-    content: "";
+    content: '';
 }
 
 /* Confidence indicator */

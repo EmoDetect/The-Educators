@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -9,14 +11,14 @@
     --game-font: 'Fredoka One';
 }
 html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  height: 100%;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
 }
 body {
-  background-color: #fffdf7;
-  font-size: 1.4rem;
-  height: 100%;
+    background-color: #fffdf7;
+    font-size: 1.4rem;
+    height: 100%;
 }
 
 /* LOGIN & REGISTRATION CHILDREN */
@@ -57,16 +59,15 @@ body {
     display: block;
 }
 
-
 /* HOMEPAGE GAME */
 .main-container {
-  display: flex;
+    display: flex;
     flex-direction: column;
     min-height: 100%;
 }
 
 main {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 /* style for take canvas to take a photo */
@@ -81,7 +82,7 @@ main {
 }
 .contentarea {
     font-size: 16px;
-    font-family: Arial;
+    font-family: "Poppins";
     text-align: center;
 }
 /*Dashboard educator*/

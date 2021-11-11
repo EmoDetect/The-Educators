@@ -51,11 +51,10 @@ function login() {
         .auth()
         .signInWithEmailAndPassword(userEmail, userPass)
         .catch(function (error) {
-            // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
 
-            window.alert('Error : ' + errorMessage);
+            // window.alert('Error : ' + errorMessage);
 
             // ...
         });

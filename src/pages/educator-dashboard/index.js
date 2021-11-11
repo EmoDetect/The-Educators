@@ -15,28 +15,27 @@ const allKidsEmotions = {};
 // let anger = document.getElementById('anger');
 
 emotionsRange = {
-    'VERY_UNLIKELY': 1,
-    'UNLIKELY': 2,
-    'POSSIBLE': 3,
-    'LIKELY': 4,
-    'VERY_LIKELY': 5,
-}
+    VERY_UNLIKELY: 1,
+    UNLIKELY: 2,
+    POSSIBLE: 3,
+    LIKELY: 4,
+    VERY_LIKELY: 5
+};
 
 emotionsNames = {
-    'VERY_UNLIKELY': 'Very Unlikely',
-    'UNLIKELY': 'Unlikely',
-    'POSSIBLE': 'Possible',
-    'LIKELY': 'Likely',
-    'VERY_LIKELY': 'Very Likely',
-}
+    VERY_UNLIKELY: 'Very Unlikely',
+    UNLIKELY: 'Unlikely',
+    POSSIBLE: 'Possible',
+    LIKELY: 'Likely',
+    VERY_LIKELY: 'Very Likely'
+};
 
 emotionsMap = {
     1: ['joy-range', 'joyLikelihood'],
     2: ['sorrow-range', 'sorrowLikelihood'],
     3: ['surprise-range', 'surpriseLikelihood'],
-    4: ['anger-range', 'angerLikelihood'],
-}
-
+    4: ['anger-range', 'angerLikelihood']
+};
 
 const articleContainer = document.querySelector('.statistics-container');
 
@@ -46,11 +45,13 @@ const getKids = async () => {
     let res = snapshot.docs.map((doc) => doc);
     let i = 0;
     res.forEach((element) => {
-        i = i+1;
-            articleContainer.insertAdjacentHTML(
-                'beforeend',
-                `<article>
-                <img src="data:image/png;base64,${element.data().emotions[0].base64Img}" alt="" />
+        i = i + 1;
+        articleContainer.insertAdjacentHTML(
+            'beforeend',
+            `<article>
+                <img src="data:image/png;base64,${
+                    element.data().emotions[0].base64Img
+                }" alt="" />
                 <div id="data">
 
                     <div class="emotion-row">
@@ -152,13 +153,21 @@ const getKids = async () => {
 };
 
 getKids().then((res) => {
+    setTimeout(() => {
+        document
+            .getElementById('statistics-section')
+            .classList.add('show-statistics-container');
+
+        document.querySelector('.loader').style.display = 'none';
+    }, 2000);
+
     let childNb = 0;
-    res.forEach(element => {
+    res.forEach((element) => {
         childNb = childNb + 1;
 
         for (let i = 1; i <= 4; i++) {
             let string = emotionsMap[i][1];
-           
+
             range = emotionsRange[element.data().emotions[0][string]];
 
             for (let j = 1; j <= range; j++) {
@@ -172,9 +181,9 @@ getKids().then((res) => {
                 idEmotionValue = idEmotionValue + JSON.stringify(i);
                 idEmotionValue = idEmotionValue + JSON.stringify(childNb);
 
-                document.getElementById(idEmotionValue).innerHTML = emotionsNames[element.data().emotions[0][string]];
+                document.getElementById(idEmotionValue).innerHTML =
+                    emotionsNames[element.data().emotions[0][string]];
             }
         }
-    })
-    
-})
+    });
+});
