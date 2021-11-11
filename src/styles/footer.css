@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 footer {
     color: #fff;
     background-color: #008c99;
+    font-family: "Poppins";
 }
 
 footer .footer-container {
@@ -24,7 +26,7 @@ footer .footer-container ul li {
     margin-bottom: 16px;
 }
 
-footer .footer-container ul li a{
+footer .footer-container ul li a {
     font-size: 14px;
     font-weight: 500;
     color: #fff;
@@ -45,7 +47,7 @@ footer .footer-container p {
     position: relative;
 }
 
-.footer-link::after{
+.footer-link::after {
     content: '';
     width: 100%;
     height: 2px;
@@ -55,9 +57,9 @@ footer .footer-container p {
     bottom: -3px;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
 }
 
-.footer-link:hover::after{
+.footer-link:hover::after {
     transform: scaleX(1);
 }

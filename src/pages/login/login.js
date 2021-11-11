@@ -55,7 +55,7 @@ function login() {
             const errorCode = error.code;
             const errorMessage = error.message;
 
-            window.alert('Error : ' + errorMessage);
+            // window.alert('Error : ' + errorMessage);
 
             // ...
         });

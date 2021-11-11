@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Educator Dashboard</title>
         <link rel="stylesheet" href="/src/styles/style.css" />
-        <link rel="stylesheet" href="/src/styles/educator-dashboard.css">
-        <link rel="stylesheet" href="/src/styles/header.css">
-        <link rel="stylesheet" href="/src/styles/footer.css">
+        <link rel="stylesheet" href="/src/styles/educator-dashboard.css" />
+        <link rel="stylesheet" href="/src/styles/header.css" />
+        <link rel="stylesheet" href="/src/styles/footer.css" />
+        <link rel="stylesheet" href="/src/styles/loader-style.css" />
         <style>
             header {
                 background-color: #008c99;
@@ -20,40 +21,78 @@
             <header>
                 <div class="header-container">
                     <nav class="nav">
-                        <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="logo">
-
-                            <img src="/src/img/logo.png" alt="logo" >
-
+                        <a
+                            href="/src/pages/educator-dashboard/educator-dashboard.html"
+                            class="logo"
+                        >
+                            <img
+                                src="/src/img/logo.png"
+                                alt="logo"
+                                onClick="window.location.reload()"
+                            />
                         </a>
                         <ul class="nav-list">
                             <li>
-                                <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="nav-link">Home</a>
+                                <a
+                                    href="/src/pages/educator-dashboard/educator-dashboard.html"
+                                    class="nav-link"
+                                    >Home</a
+                                >
                             </li>
                             <li>
-                                <a href="#statistics-section" class="nav-link">Statistics</a>
+                                <a href="#statistics-section" class="nav-link"
+                                    >Statistics</a
+                                >
                             </li>
                             <li>
-                                <a href="#overview-section" class="nav-link">Overview</a>
+                                <a href="#overview-section" class="nav-link"
+                                    >Overview</a
+                                >
                             </li>
                         </ul>
                         <a href="#" id="nav-logout">Logout</a>
                     </nav>
                 </div>
             </header>
-    
+
             <main>
+                <div class="loader">
+                    <div class="circular">
+                        <div class="inner"></div>
+                        <div class="outer"></div>
+                        <div class="numb"></div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="bar right">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        const numb = document.querySelector('.numb');
+                        let counter = 0;
+                        setInterval(() => {
+                            if (counter == 100) {
+                                clearInterval();
+                            } else {
+                                counter += 1;
+                                // numb.textContent = counter + '%';
+                            }
+                        }, 80);
+                    </script>
+                </div>
+
                 <section id="statistics-section" class="statistics-container">
                     <h2 class="statistics-title">Statistics about children</h2>
-
                 </section>
                 <section id="overview-section">
                     <div class="overview-container">
                         <h2 class="overview-title">Overview</h2>
                     </div>
                 </section>
-                <section id="blank-section">
-                    
-                </section>
+                <section id="blank-section"></section>
             </main>
 
             <footer>
@@ -73,7 +112,6 @@
                     <p>&copy; All rights reserved</p>
                 </div>
             </footer>
-
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -90,21 +128,21 @@
                 appId: '1:761524655097:web:cfa638d34c2d2e9320e328'
             };
             firebase.initializeApp(config);
-            
+
             firebase.auth().onAuthStateChanged(function (user) {
-              if (! user) {
-                window.location.href = "/src/pages/login/login.html";
-              }
+                if (!user) {
+                    window.location.href = '/src/pages/login/login.html';
+                }
             });
 
             const auth = firebase.auth();
             const db = firebase.firestore();
 
             window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 0;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
+                let header = document.querySelector('header');
+                let windowPosition = window.scrollY > 0;
+                header.classList.toggle('scrolling-active', windowPosition);
+            });
         </script>
         <script src="./index.js"></script>
     </body>
