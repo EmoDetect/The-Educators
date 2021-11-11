@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Educator Dashboard</title>
         <link rel="stylesheet" href="/src/styles/style.css" />
+        <link rel="stylesheet" href="/src/styles/educator-dashboard.css">
         <link rel="stylesheet" href="/src/styles/header.css">
+        <link rel="stylesheet" href="/src/styles/footer.css">
         <style>
             header {
                 background-color: #008c99;
@@ -40,12 +42,36 @@
             <main>
                 <section id="statistics-section" class="statistics-container">
                     <h2 class="statistics-title">Statistics about children</h2>
+                    
                 </section>
-                
+                <section id="overview-section">
+                    <div class="overview-container">
+                        <h2 class="overview-title">Overview</h2>
+                    </div>
+                </section>
+                <section id="blank-section">
+                    
+                </section>
             </main>
-            <section id="overview-section">
-                <div class="overview-container"></div>
-            </section>
+
+            <footer>
+                <div class="footer-container">
+                    <p class="site-name">Smarty Games</p>
+                    <ul class="flex-row">
+                        <li>
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Statistics</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Overview</a>
+                        </li>
+                    </ul>
+                    <p>&copy; All rights reserved</p>
+                </div>
+            </footer>
+            
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>

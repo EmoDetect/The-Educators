@@ -11,7 +11,7 @@
 }
 
 html {
-   
+  font-size: 62.5%;
   box-sizing: border-box;
   height: 100%;
 }
@@ -138,51 +138,7 @@ main {
 
 /* EDUCATORDASHBOARD.CSS */
 
-.statistics-container {
-  background-color: #fffdf7;
-  height: 80vh;
-  padding: 2rem;
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.statistics-title {
-  margin-left: 3rem;
-  font-size: 3rem;
-  margin-bottom: 3rem;
-}
-
-.statistics-container article {
-  background-color: #008c99;
-  height: 30rem;
-  width: 90rem;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-}
-
-.statistics-container article div {
-  background-color: lavenderblush;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 51rem;
-  height: 17rem;
-}
-
-.statistics-container article img {
-  display: block;
-  background-color: lightsalmon;
-  width: 260px;
-  height: 170px;
-}
-
-.hide {
-  display: none;
-}
 
 /* style for take canvas to take a photo */
 
@@ -201,13 +157,4 @@ main {
   font-size: 16px;
   font-family: Arial;
   text-align: center;
-}
-
-
-/*Dashboard educator*/
-
-.overview-container {
-  background-color: #008c99;
-  width: 100%;
-  height: 30vh;
 }
