@@ -9,16 +9,14 @@
     --game-font: 'Fredoka One';
 }
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
 }
 body {
-    background-color: #fffdf7;
-    font-size: 1.4rem;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  background-color: #fffdf7;
+  font-size: 1.4rem;
+  height: 100%;
 }
 /* LOGIN & REGISTRATION CHILDREN */
 .webcam-container {
@@ -59,47 +57,82 @@ body {
 }
 
 
-/* EDUCATORDASHBOARD.CSS */
-.statistics-container {
-    background-color: #fffdf7;
-    height: 80vh;
-    padding: 2rem;
-    margin-top: 10rem;
+/* HOMEPAGE GAME */
+.main-container {
+  display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.game-container {
+    margin-top: 2rem;
+    font-family: var(--game-font);
+    background-color: #457b9d;  
     display: flex;
+    justify-content: center;
+    height: 50rem;
+    width: 80rem;
+    /* grid-template-columns: 72% 8%;
+    flex-grow: 1; */
+}
+
+.equation {
+    background-color: #e5e5e5;
+    font-size: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin: 10px;
+    width: 70rem;
+}
+
+.equation .number {
+    color: var(--number-color);
+}
+
+.equation .sign {
+    color: var(--sign-color);
+}
+
+.answer-options {
+    box-sizing: border-box;
+    font-size: 6rem;
+    display: flex;
+    color: orangered;
     flex-direction: column;
     align-items: center;
+    border-radius: 6px;
+    margin: 10px;
 }
-.statistics-title {
-    margin-left: 3rem;
-    font-size: 3rem;
-    margin-bottom: 3rem;
+
+.answer-options p {
+    cursor: pointer;
+    text-align: center;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #48bfe3 ;
+    transition: 1s;
+    flex-grow: 1;
+    line-height: 150px;
 }
-.statistics-container article {
-    background-color: #008c99;
-    height: 30rem;
-    width: 90rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3rem;
+
+.answer-options p:first-child {
+    margin-top: 0px;
 }
-.statistics-container article div {
-    background-color: lavenderblush;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 51rem;
-    height: 17rem;
+
+.answer-options p:hover {
+    background-color: #fcbf49;
 }
-.statistics-container article img {
-    display: block;
-    background-color: lightsalmon;
-    width: 260px;
-    height: 170px;
-}
-.hide {
-    display: none;
-}
+
+
+
 /* style for take canvas to take a photo */
 #video {
     border: 1px solid black;
