@@ -82,6 +82,19 @@ header {
     transition: background-color 0.5s ease;
 }
 
+#nav-logout-games {
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: background-color 0.5s ease;
+}
+
+#nav-logout-games:hover {
+    background-color: #d3d3d3;
+}
+
 #nav-logout:hover {
     background-color: #d3d3d3;
 }

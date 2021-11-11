@@ -103,6 +103,7 @@ const getKids = async () => {
                     </div>
 
                     <div class="conf-container">
+                        <span>Confidence</span>
                         <div class="progress progress-moved">
                             <div id="progress-bar${i}" class="progress-bar"></div>
                             <div id="bar${i}" class="loader${i}" ></div>
@@ -165,7 +166,7 @@ getKids().then((res) => {
             .classList.add('show-overview-container');
 
         document.querySelector('.loader').style.display = 'none';
-    }, 2000);
+    }, 620);
 
     let childNb = 0;
     res.forEach((element) => {

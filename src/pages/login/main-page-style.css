@@ -60,3 +60,36 @@ body {
 .btn:hover {
     background-color: #d3d3d3;
 }
+
+
+.active {
+    position: relative;
+    z-index: 1001;
+    display: block;
+    animation: 1.9s ease-in-out 0.2s normal both 1 running bounceInUp;
+}
+
+@keyframes bounceInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 500px, 0);
+        transform: translate3d(0, 500px, 0);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}

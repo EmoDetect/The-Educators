@@ -28,18 +28,23 @@ document.querySelectorAll('.option').forEach((option) => {
         nbOfClick++;
 
         if (event.target.textContent == answer) {
+            document.getElementsByClassName('equation')[0].style.backgroundColor = '#38b000';
+
             document.getElementById('happyKidImage').classList.add('active');
             resultFromEcuation.innerHTML = answer;
             setTimeout(() => {
                 answer = generateEquation();
-            }, 5000);
+            }, 4000);
         } else {
+            document.getElementsByClassName('equation')[0].style.backgroundColor = '#e01e37';
+            
             document.getElementById('sadKidImage').classList.add('active');
             setTimeout(() => {
+                document.getElementsByClassName('equation')[0].style.backgroundColor = 'white';
                 document
                     .getElementById('sadKidImage')
                     .classList.remove('active');
-            }, 5000);
+            }, 4000);
             tryAgainAudio.play();
         }
     });
