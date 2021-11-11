@@ -18,6 +18,7 @@ body {
   font-size: 1.4rem;
   height: 100%;
 }
+
 /* LOGIN & REGISTRATION CHILDREN */
 .webcam-container {
     height: 65vh;
@@ -68,71 +69,6 @@ main {
   flex-grow: 1;
 }
 
-.game-container {
-    margin-top: 2rem;
-    font-family: var(--game-font);
-    background-color: #457b9d;  
-    display: flex;
-    justify-content: center;
-    height: 50rem;
-    width: 80rem;
-    /* grid-template-columns: 72% 8%;
-    flex-grow: 1; */
-}
-
-.equation {
-    background-color: #e5e5e5;
-    font-size: 13rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    margin: 10px;
-    width: 70rem;
-}
-
-.equation .number {
-    color: var(--number-color);
-}
-
-.equation .sign {
-    color: var(--sign-color);
-}
-
-.answer-options {
-    box-sizing: border-box;
-    font-size: 6rem;
-    display: flex;
-    color: orangered;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 6px;
-    margin: 10px;
-}
-
-.answer-options p {
-    cursor: pointer;
-    text-align: center;
-    width: 15rem;
-    height: 5rem;
-    border-radius: 6px;
-    margin-top: 10px;
-    background-color: #48bfe3 ;
-    transition: 1s;
-    flex-grow: 1;
-    line-height: 150px;
-}
-
-.answer-options p:first-child {
-    margin-top: 0px;
-}
-
-.answer-options p:hover {
-    background-color: #fcbf49;
-}
-
-
-
 /* style for take canvas to take a photo */
 #video {
     border: 1px solid black;
@@ -153,4 +89,8 @@ main {
     background-color: #008c99;
     width: 100%;
     height: 30vh;
+}
+
+.hide {
+    display: none;
 }
