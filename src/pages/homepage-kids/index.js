@@ -28,17 +28,18 @@ document.querySelectorAll('.option').forEach((option) => {
         nbOfClick++;
 
         if (event.target.textContent == answer) {
-            document.querySelector('.equation').style.backgroundColor = 'green';
+            document.getElementById('happyKidImage').classList.add('active');
+            resultFromEcuation.innerHTML = answer;
             setTimeout(() => {
                 answer = generateEquation();
-            }, 2000);
+            }, 3000);
         } else {
-            document.querySelector('.equation').style.backgroundColor =
-                '#f94144';
+            document.getElementById('sadKidImage').classList.add('active');
             setTimeout(() => {
-                document.querySelector('.equation').style.backgroundColor =
-                    'white';
-            }, 1000);
+                document
+                    .getElementById('sadKidImage')
+                    .classList.remove('active');
+            }, 3000);
             tryAgainAudio.play();
         }
     });
