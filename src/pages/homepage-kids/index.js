@@ -32,14 +32,14 @@ document.querySelectorAll('.option').forEach((option) => {
             resultFromEcuation.innerHTML = answer;
             setTimeout(() => {
                 answer = generateEquation();
-            }, 3000);
+            }, 5000);
         } else {
             document.getElementById('sadKidImage').classList.add('active');
             setTimeout(() => {
                 document
                     .getElementById('sadKidImage')
                     .classList.remove('active');
-            }, 3000);
+            }, 5000);
             tryAgainAudio.play();
         }
     });
