@@ -30,6 +30,8 @@ const generateEquation = () => {
     option3.innerHTML = switchAnswers[2];
 
     document.querySelector('.equation').style.backgroundColor = 'white';
+    document.getElementById('happyKidImage').classList.remove('active');
+    
 
     return answer;
 };
