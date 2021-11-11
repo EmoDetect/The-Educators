@@ -110,8 +110,8 @@ const getKids = async () => {
                     </div>
                 </div>
             </article>`
-            );
-        
+        );
+
         let confidenceValue = element.data().emotions[0].detectionConfidence;
         confidenceValue = confidenceValue * 100;
         confidenceValue = parseInt(confidenceValue);
@@ -126,27 +126,30 @@ const getKids = async () => {
         let cop = i;
         setTimeout(() => {
             let bar = document.getElementById('bar' + cop);
-    
+
             const root = document.documentElement;
-    
-            const confidence = root.style.getPropertyValue('--confidence-percent' + cop);
+
+            const confidence = root.style.getPropertyValue(
+                '--confidence-percent' + cop
+            );
             //console.log(confidence);
-    
+
             let loaderToRemove = 'loader' + cop;
             let finishToAdd = 'finish' + cop;
-            console.log("Remove: ", loaderToRemove);
-            console.log("Add: ", finishToAdd);
+            console.log('Remove: ', loaderToRemove);
+            console.log('Add: ', finishToAdd);
 
             bar.classList.add(finishToAdd);
             bar.classList.remove(loaderToRemove);
-            
+
             bar.innerHTML = confidence;
 
             let stopToAdd = 'stop' + cop;
 
-            document.getElementById('progress-bar' + cop).classList.add(stopToAdd);
-    
-        }, 4000)
+            document
+                .getElementById('progress-bar' + cop)
+                .classList.add(stopToAdd);
+        }, 4000);
     });
 
     return res;
@@ -157,6 +160,9 @@ getKids().then((res) => {
         document
             .getElementById('statistics-section')
             .classList.add('show-statistics-container');
+        document
+            .getElementById('overview-section')
+            .classList.add('show-overview-container');
 
         document.querySelector('.loader').style.display = 'none';
     }, 2000);
