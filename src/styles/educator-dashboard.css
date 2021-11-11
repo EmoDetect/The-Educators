@@ -1,3 +1,8 @@
+  :root {
+    --confidence-percent: 0%;
+    --confidence-value: 0;
+  }
+  
   .hide {
     display: none;
   }
@@ -34,12 +39,12 @@
   .statistics-title {
     margin-left: 3rem;
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
   }
   
   .statistics-container article {
     align-items: center;
-    background-color: #008c99;
+    background-color: #e9ecef;
     width: 90rem;
     padding: 2rem;
     display: flex;
@@ -48,8 +53,10 @@
   }
   
   .statistics-container article #data {
+    border-radius: 3px;
+    box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
     font-size: 1.6rem;
-    background-color: lavenderblush;
+    background-color: #fffdf7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,8 +66,9 @@
   }
   
   .statistics-container article img {
+    border-radius: 3px;
+    box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
     display: block;
-    background-color: lightsalmon;
     width: 260px;
     height: 170px;
   }
@@ -90,7 +98,7 @@
   }
 
   .active {
-      background-color: green;
+      background-color: #008c99;
   }
 
 .statistics-container h2:after {
@@ -113,4 +121,145 @@
     height: 19px;
     background: url(/src/img/titleIcon.png);
     content: "";
+}
+
+/* Confidence indicator */
+
+.conf-container {
+  margin-top: 20px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.progress {
+  border-radius: 30px;
+  background-color: #f1f1f1;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 30px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar{
+  background-color: #008c99;
+  animation: progress 5s 1;
+}
+
+@keyframes progress {
+  0% {
+      width: 0%;
+      background: #008c99;
+      opacity: 0.4;
+  }
+
+  100% {
+    width: var(--confidence-percent1);
+    background: #008c99;
+    box-shadow: 0 0 40px #008c99;
+  }
+}
+
+
+.loader1 {
+  --p: 0;
+  animation: p1 5s steps(80) 1;
+  counter-reset: p var(--p);
+  font-size: 1.3em;
+  position: absolute;
+  bottom: 15px;
+  left: 325px;
+}
+
+.loader1:after {
+  content: counter(p) "%";
+}
+
+.finish1 {
+content: var(--confidence-percent1);
+font-size: 1.3em;
+position: absolute;
+bottom: 15px;
+left: 325px;
+}
+
+@keyframes p1 {
+  90%, 100% {
+      --p: var(--confidence-value1);
+  }
+}
+
+
+
+.loader2 {
+  --p: 0;
+  animation: p2 5s steps(80) 1;
+  counter-reset: p var(--p);
+  font-size: 1.3em;
+  position: absolute;
+  bottom: 15px;
+  left: 325px;
+}
+
+.loader2:after {
+  content: counter(p) "%";
+}
+
+.finish2 {
+content: var(--confidence-percent2);
+font-size: 1.3em;
+position: absolute;
+bottom: 15px;
+left: 325px;
+}
+
+@keyframes p2 {
+  90%, 100% {
+      --p: var(--confidence-value2);
+  }
+}
+
+
+
+.loader3 {
+  --p: 0;
+  animation: p3 5s steps(80) 1;
+  counter-reset: p var(--p);
+  font-size: 1.3em;
+  position: absolute;
+  bottom: 15px;
+  left: 325px;
+}
+
+.loader3:after {
+  content: counter(p) "%";
+}
+
+.finish3 {
+content: var(--confidence-percent3);
+font-size: 1.3em;
+position: absolute;
+bottom: 15px;
+left: 325px;
+}
+
+@keyframes p3 {
+  90%, 100% {
+      --p: var(--confidence-value3);
+  }
+}
+
+.stop1 {
+  width: var(--confidence-percent1);
+}
+
+.stop2 {
+  width: var(--confidence-percent2);
+}
+
+.stop3 {
+  width: var(--confidence-percent3);
 }
