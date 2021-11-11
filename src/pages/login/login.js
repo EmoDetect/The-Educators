@@ -51,7 +51,6 @@ function login() {
         .auth()
         .signInWithEmailAndPassword(userEmail, userPass)
         .catch(function (error) {
-            // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
 
