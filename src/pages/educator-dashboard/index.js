@@ -43,7 +43,6 @@ const articleContainer = document.querySelector('.statistics-container');
 const getKids = async () => {
     const snapshot = await firebase.firestore().collection('kidEmotions').get();
 
-
     let res = snapshot.docs.map((doc) => doc);
     let i = 0;
     res.forEach((element) => {
@@ -107,6 +106,7 @@ const getKids = async () => {
                 </div>
             </article>`
             );
+
     });
 
     return res;
