@@ -102,11 +102,51 @@ const getKids = async () => {
                         <span id="emotion-value4${i}" class="emotion-value">Very...</span>
                     </div>
 
-                    <label for="confidence">Confidence</label>
-                    <meter id="confidence" value="0.6">60%</meter>
+                    <div class="conf-container">
+                        <div class="progress progress-moved">
+                            <div id="progress-bar${i}" class="progress-bar"></div>
+                            <div id="bar${i}" class="loader${i}" ></div>
+                        </div>
+                    </div>
                 </div>
             </article>`
-        );
+            );
+        
+        let confidenceValue = element.data().emotions[0].detectionConfidence;
+        confidenceValue = confidenceValue * 100;
+        confidenceValue = parseInt(confidenceValue);
+        console.log(confidenceValue);
+
+        let confidencePercent = confidenceValue + '%';
+
+        const root = document.documentElement;
+        root.style.setProperty('--confidence-percent' + i, confidencePercent);
+        root.style.setProperty('--confidence-value' + i, confidenceValue);
+
+        let cop = i;
+        setTimeout(() => {
+            let bar = document.getElementById('bar' + cop);
+    
+            const root = document.documentElement;
+    
+            const confidence = root.style.getPropertyValue('--confidence-percent' + cop);
+            //console.log(confidence);
+    
+            let loaderToRemove = 'loader' + cop;
+            let finishToAdd = 'finish' + cop;
+            console.log("Remove: ", loaderToRemove);
+            console.log("Add: ", finishToAdd);
+
+            bar.classList.add(finishToAdd);
+            bar.classList.remove(loaderToRemove);
+            
+            bar.innerHTML = confidence;
+
+            let stopToAdd = 'stop' + cop;
+
+            document.getElementById('progress-bar' + cop).classList.add(stopToAdd);
+    
+        }, 4000)
     });
 
     return res;
