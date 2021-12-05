@@ -1,183 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/src/img/faviconx.PNG"
-        />
-        <title>Educator Dashboard</title>
-        <link rel="stylesheet" href="/src/styles/style.css" />
-        <link rel="stylesheet" href="/src/styles/educator-dashboard.css" />
-        <link rel="stylesheet" href="/src/styles/header.css" />
-        <link rel="stylesheet" href="/src/styles/footer.css" />
-        <link rel="stylesheet" href="/src/styles/loader-style.css" />
-        <link rel="stylesheet" href="/src/styles/overview-section.css">
-        <script defer src="script.js"></script>
-        <style>
-            header {
-                background-color: #008c99;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="main-container">
-            <header>
-                <div class="header-container">
-                    <nav class="nav">
-                        <a
-                            href="/src/pages/educator-dashboard/educator-dashboard.html"
-                            class="logo"
-                        >
-                            <img
-                                src="/src/img/logo.png"
-                                alt="logo"
-                                onClick="window.location.reload()"
-                            />
-                        </a>
-                        <ul class="nav-list">
-                            
-                            <li>
-                                <a href="#statistics-section" class="nav-link"
-                                    >Statistics</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#overview-section" class="nav-link"
-                                    >Overview</a
-                                >
-                            </li>
-                        </ul>
-                        <a href="#" id="nav-logout">Logout</a>
-                    </nav>
-                </div>
-            </header>
 
-            <main>
-                <div class="loader">
-                    <div class="circular">
-                        <div class="inner"></div>
-                        <div class="outer"></div>
-                        <div class="numb"></div>
-                        <div class="circle">
-                            <div class="bar left">
-                                <div class="progress"></div>
-                            </div>
-                            <div class="bar right">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <script>
-                        const numb = document.querySelector('.numb');
-                        let counter = 0;
-                        setInterval(() => {
-                            if (counter == 100) {
-                                clearInterval();
-                            } else {
-                                counter += 1;
-                                // numb.textContent = counter + '%';
-                            }
-                        }, 80);
-                    </script>
-                </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/img/faviconx.jpg" />
+    <title>Educator Dashboard</title>
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/educator-dashboard.css" />
+    <link rel="stylesheet" href="/src/styles/header.css" />
+    <link rel="stylesheet" href="/src/styles/footer.css" />
+    <link rel="stylesheet" href="/src/styles/loader-style.css" />
+    <link rel="stylesheet" href="/src/styles/overview-section.css">
+    <!-- <script defer src="script.js"></script> -->
+    <style>
+        header {
+            background-color: #008c99;
+        }
+    </style>
+</head>
 
-                <section id="statistics-section" class="statistics-container">
-                    <h2 class="statistics-title">Statistics about children</h2>
-                </section>
-                <section id="overview-section" class="overview-section-class">
-                    <div class="overview-container">
-                        <h2 class="overview-title">Overview</h2>
-                        <div class="content">
-                            <div class="box">
-                              <div class="icon"><img src="/src/img/emoji1.png" alt="emoji1"></div>
-                              <div class="counter">19</div>
-                              <div class="text">Happy</div>
-                            </div>
-                            <div class="box">
-                              <div class="icon"><img src="/src/img/emoji2.png" alt="emoji2"></div>
-                              <div class="counter">5</div>
-                              <div class="text">Angry</div>
-                            </div>
-                            <div class="box">
-                              <div class="icon"><img src="/src/img/emoji3.png" alt="emoji3"></div>
-                              <div class="counter">12</div>
-                              <div class="text">Sorrow</div>
-                            </div>
-                            <div class="box">
-                              <div class="icon"><img src="/src/img/emoji4.png" alt="emoji4"></div>
-                              <div class="counter">9</div>
-                              <div class="text">Surprise</div>
-                            </div>
-                          </div>
-                    </div>
-                </section>
-                <section id="blank-section"></section>
-            </main>
+<body>
+    <div class="main-container">
+        <header>
+            <div class="header-container">
+                <nav class="nav">
+                    <a href="/src/pages/educator-dashboard/educator-dashboard.html" class="logo">
+                        <img src="/src/img/logo.jpg" alt="logo" onClick="window.location.reload()" />
+                    </a>
+                    <ul class="nav-list">
 
-            <footer>
-                <div class="footer-container">
-                    <p class="site-name">Smarty Games</p>
-                    <ul class="flex-row">
                         <li>
-                            <a href="#" class="footer-link">Statistics</a>
+                            <a href="#statistics-section" class="nav-link">Statistics</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Overview</a>
+                            <a href="#overview-section" class="nav-link">Overview</a>
                         </li>
                     </ul>
-                    <p>&copy; All rights reserved</p>
+                    <a href="#" id="nav-logout">Logout</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="loader">
+                <div class="circular">
+                    <div class="inner"></div>
+                    <div class="outer"></div>
+                    <div class="numb"></div>
+                    <div class="circle">
+                        <div class="bar left">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="bar right">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
                 </div>
-            </footer>
-        </div>
+                <script>
+                    const numb = document.querySelector('.numb');
+                    let counter = 0;
+                    setInterval(() => {
+                        if (counter == 100) {
+                            clearInterval();
+                        } else {
+                            counter += 1;
+                            // numb.textContent = counter + '%';
+                        }
+                    }, 80);
+                </script>
+            </div>
 
-        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+            <section id="statistics-section" class="statistics-container">
+                <h2 class="statistics-title">Statistics about children</h2>
+            </section>
+            <section id="overview-section" class="overview-section-class">
+                <div class="overview-container">
+                    <h2 class="overview-title">Overview</h2>
+                    <div class="content">
+                        <div class="box">
+                            <div class="icon"><img src="/src/img/emoji1.jpg" alt="emoji1"></div>
+                            <div class="counter">19</div>
+                            <div class="text">Happy</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="/src/img/emoji2.jpg" alt="emoji2"></div>
+                            <div class="counter">5</div>
+                            <div class="text">Angry</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="/src/img/emoji3.jpg" alt="emoji3"></div>
+                            <div class="counter">12</div>
+                            <div class="text">Sorrow</div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><img src="/src/img/emoji4.jpg" alt="emoji4"></div>
+                            <div class="counter">9</div>
+                            <div class="text">Surprise</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="blank-section"></section>
+        </main>
 
-        <script>
-            const config = {
-                apiKey: 'AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc',
-                authDomain: 'theeducators-ff916.firebaseapp.com',
-                projectId: 'theeducators-ff916',
-                storageBucket: 'theeducators-ff916.appspot.com',
-                messagingSenderId: '761524655097',
-                appId: '1:761524655097:web:cfa638d34c2d2e9320e328'
-            };
-            firebase.initializeApp(config);
+        <footer>
+            <div class="footer-container">
+                <p class="site-name">Smarty Games</p>
+                <ul class="flex-row">
+                    <li>
+                        <a href="#" class="footer-link">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Overview</a>
+                    </li>
+                </ul>
+                <p>&copy; All rights reserved</p>
+            </div>
+        </footer>
+    </div>
 
-            firebase.auth().onAuthStateChanged(function (user) {
-                if (!user) {
-                    window.location.href = '/src/pages/login/login.html';
-                }
-            });
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
 
-            const auth = firebase.auth();
-            const db = firebase.firestore();
+    <script>
+        const config = {
+            apiKey: 'AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc',
+            authDomain: 'theeducators-ff916.firebaseapp.com',
+            projectId: 'theeducators-ff916',
+            storageBucket: 'theeducators-ff916.appspot.com',
+            messagingSenderId: '761524655097',
+            appId: '1:761524655097:web:cfa638d34c2d2e9320e328'
+        };
+        firebase.initializeApp(config);
 
-            window.addEventListener('scroll', function () {
-                let header = document.querySelector('header');
-                let windowPosition = window.scrollY > 0;
-                header.classList.toggle('scrolling-active', windowPosition);
-            });
-        </script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (!user) {
+                window.location.href = '/src/pages/login/login.html';
+            }
+        });
 
-        <script>
-            CSS.registerProperty({
-                name: '--p',
-                syntax: '<integer>',
-                initialValue: 0,
-                inherits: true
-            });
+        const auth = firebase.auth();
+        const db = firebase.firestore();
 
-            
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        });
+    </script>
 
-        </script>
+    <script>
+        CSS.registerProperty({
+            name: '--p',
+            syntax: '<integer>',
+            initialValue: 0,
+            inherits: true
+        });
 
-        <script src="./index.js"></script>
-    </body>
+
+
+    </script>
+
+    <script src="./index.js"></script>
+</body>
+
 </html>

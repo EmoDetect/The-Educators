@@ -1,12 +1,14 @@
 import firebase from "firebase/app";
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc",
-  authDomain: "theeducators-ff916.firebaseapp.com",
-  projectId: "theeducators-ff916",
-  storageBucket: "theeducators-ff916.appspot.com",
-  messagingSenderId: "761524655097",
-  appId: "1:761524655097:web:cfa638d34c2d2e9320e328",
+  apiKey: "AIzaSyDrHxPe9-NiswEmrLrFGks8kJP85EL9JNo",
+  authDomain: "emodetect-55dd1.firebaseapp.com",
+  projectId: "emodetect-55dd1",
+  storageBucket: "emodetect-55dd1.appspot.com",
+  messagingSenderId: "326943835463",
+  appId: "1:326943835463:web:66f55199d1dd7a8b9e3862",
+  measurementId: "G-65HTV3E270"
 };
 
 // Initialize Firebase
