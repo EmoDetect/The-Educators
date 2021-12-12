@@ -1,6 +1,6 @@
 <h1 align=center> 👨‍🏫 The Educators 👩‍🏫 </h1>
 
-<h2 align=center> Cosmin Barzan & Tudor Moldovan </h2>
+<h2 align=center> Cosmin Barzannnn & Tudor Moldovan </h2>
 
 ### Overview
 
