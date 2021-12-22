@@ -1,3 +1,10 @@
+import firebase from "firebase/app";
+import "firebase/auth";
+import "initApp"
+import "auth"
+import db from "database"
+
+
 import startup from './capture-photo.js';
 import getEmotions from './callApi.js';
 import generateEquation from './gameApp.js';
@@ -27,6 +34,11 @@ document.querySelectorAll('.option').forEach((option) => {
         }
         nbOfClick++;
 
+        document.querySelector('.slider-img').style.display = 'block';
+        setTimeout(() => {
+            document.querySelector('.slider-img').style.display = 'none';
+        }, 4000)
+
         if (event.target.textContent == answer) {
             document.getElementsByClassName('equation')[0].style.backgroundColor = '#38b000';
 
@@ -37,7 +49,7 @@ document.querySelectorAll('.option').forEach((option) => {
             }, 4000);
         } else {
             document.getElementsByClassName('equation')[0].style.backgroundColor = '#e01e37';
-            
+
             document.getElementById('sadKidImage').classList.add('active');
             setTimeout(() => {
                 document.getElementsByClassName('equation')[0].style.backgroundColor = 'white';
@@ -62,30 +74,38 @@ const localStorageApiKey =
     'firebase:authUser:AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc:[DEFAULT]';
 
 const localStorageValue = JSON.parse(localStorage.getItem(localStorageApiKey));
-const userID = localStorageValue.uid;
+// const userID = localStorageValue.uid;
+
+
 
 function saveEmotionDb(emotion) {
+    const userID = firebase.auth().currentUser.uid;
+    console.log("loggedUser", userID);
+
     db.collection('kidEmotions')
         .doc(userID)
         .get()
         .then((doc) => {
             if (doc.exists) {
-                return doc.data().emotions;
+                const emotionArray = doc.data().emotions;
+
+                emotionArray.push(emotion);
+                db.collection('kidEmotions').doc(userID).set({
+                    emotions: emotionArray
+                });
+
             } else {
                 db.collection('kidEmotions')
                     .doc(userID)
                     .set({
-                        emotions: []
+                        emotions: [emotion]
                     })
-                    .then(() => {
-                        return doc.data().emotions;
-                    });
+                    .catch(error => console.log(error))
+                // .then((docRef) => {
+                //     console.log("DOC DATA", doc.data());
+                //     console.log("DOC REF", docRef);
+                //     return doc.data().emotions;
+                // });
             }
         })
-        .then((emotionArray) => {
-            emotionArray.push(emotion);
-            db.collection('kidEmotions').doc(userID).set({
-                emotions: emotionArray
-            });
-        });
 }

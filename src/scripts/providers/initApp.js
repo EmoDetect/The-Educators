@@ -8,8 +8,10 @@ const firebaseConfig = {
   storageBucket: "emodetect-55dd1.appspot.com",
   messagingSenderId: "326943835463",
   appId: "1:326943835463:web:66f55199d1dd7a8b9e3862",
-  measurementId: "G-65HTV3E270"
+  measurementId: "${config.measurementId}"
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+console.log(firebaseConfig);

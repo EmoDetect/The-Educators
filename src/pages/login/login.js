@@ -1,6 +1,15 @@
+import firebase from "firebase/app";
+import "firebase/auth";
+import "initApp"
+import db from "database"
+
 const user = localStorage.getItem('user');
 
-const showRegisterForm = () => {
+const createNewAccountButton = document.querySelector('#new-account');
+
+createNewAccountButton.addEventListener('click', showRegisterForm);
+
+function showRegisterForm() {
     const loginForm = document.getElementById('login-div');
     const registerForm = document.getElementById('register-div');
 
@@ -27,25 +36,39 @@ if (user === 'educator') {
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+        console.log("User", user);
         //User is signed in.
         db.collection('users')
             .doc(user.uid)
             .get()
             .then((doc) => {
+                console.log("DOC DATA", doc.data());
                 if (doc.data().role === 'kid') {
                     window.location.href =
-                        '/src/pages/activities-list/activities.html';
+                        '/pages/activities-list/activities.html';
                 } else {
                     window.location.href =
-                        '/src/pages/educator-dashboard/educator-dashboard.html';
+                        '/pages/educator-dashboard/educator-dashboard.html';
                 }
+            })
+            .catch((error) => {
+                console.log(error);
             });
     }
 });
 
-function login() {
+const loginButton = document.getElementById('login-button');
+
+loginButton.addEventListener('click', login)
+
+function login(event) {
+    event.stopPropagation();
+    event.preventDefault();
+
     const userEmail = document.getElementById('email_field').value;
     const userPass = document.getElementById('password_field').value;
+
+    console.log("Inside Login");
 
     firebase
         .auth()
@@ -54,10 +77,10 @@ function login() {
             const errorCode = error.code;
             const errorMessage = error.message;
 
-            // window.alert('Error : ' + errorMessage);
-
-            // ...
+            console.error(error);
         });
+
+    return;
 }
 
 function logout() {
@@ -75,15 +98,14 @@ registerBtn.addEventListener('click', (event) => {
     const password = document.getElementById('password_field_register').value;
 
     // sign up the user & add firestore data
-    auth.createUserWithEmailAndPassword(email, password)
+    firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((cred) => {
-            console.log(cred);
-            return db.collection('users').doc(cred.uid).set({
+            return db.collection('users').doc(cred.user.uid).set({
                 role: 'kid'
             });
         })
         .then(() => {
-            window.location.href = '/src/pages/activities-list/activities.html';
+            window.location.href = '/pages/activities-list/activities.html';
         });
 });
 

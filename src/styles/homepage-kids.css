@@ -71,6 +71,7 @@ main {
 }
 
 .slider-img {
+    display: none;
     position: absolute;
     right: 1px;
     bottom: -25px;

@@ -1,3 +1,16 @@
+import firebase from "firebase/app"
+import "firebase/auth"
+
+import "initApp"
+import "auth"
+import db from "database"
+
+window.addEventListener('scroll', function () {
+    let header = document.querySelector('header');
+    let windowPosition = window.scrollY > 0;
+    header.classList.toggle('scrolling-active', windowPosition);
+});
+
 const logoutButton = document.getElementById('nav-logout');
 
 logoutButton.addEventListener('click', () => {
@@ -40,7 +53,7 @@ emotionsMap = {
 const articleContainer = document.querySelector('.statistics-container');
 
 const getKids = async () => {
-    const snapshot = await firebase.firestore().collection('kidEmotions').get();
+    const snapshot = await db.collection('kidEmotions').get();
 
     let res = snapshot.docs.map((doc) => doc);
     let i = 0;
@@ -49,9 +62,8 @@ const getKids = async () => {
         articleContainer.insertAdjacentHTML(
             'beforeend',
             `<article>
-                <img src="data:image/png;base64,${
-                    element.data().emotions[0].base64Img
-                }" alt="" />
+                <img src="data:image/png;base64,${element.data().emotions[0].base64Img
+            }" alt="" />
                 <div id="data">
 
                     <div class="emotion-row">

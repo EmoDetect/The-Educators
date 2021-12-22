@@ -3,7 +3,7 @@
 <head>
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet" />
-    <link rel="stylesheet" href="./login-style.css" />
+    <link rel="stylesheet" href="login-style.css" />
     <link rel="stylesheet" href="/src/styles/header.css" />
     <link rel="icon" type="image/png" sizes="16x16" href="/src/img/faviconx.jpg" />
 </head>
@@ -21,15 +21,17 @@
     <main>
         <div id="login-div" class="main-div">
             <h3>Login</h3>
-            <input type="email" placeholder="Email..." id="email_field" />
-            <input type="password" placeholder="Password..." id="password_field" />
-            <button id="login-button" onclick="login()">
-                Login to Account
-            </button>
-            <p id="display-or-text"><span>or</span></p>
-            <button id="new-account" onclick="showRegisterForm()">
-                Create New Account
-            </button>
+            <form action="">
+                <input type="email" placeholder="Email..." id="email_field" autocomplete="on" />
+                <input type="password" placeholder="Password..." id="password_field" autocomplete="on" />
+                <button type="submit" id="login-button">
+                    Login to Account
+                </button>
+                <p id="display-or-text"><span>or</span></p>
+                <button id="new-account">
+                    Create New Account
+                </button>
+            </form>
         </div>
 
         <!-- register -->
@@ -40,32 +42,10 @@
             <button id="register_button">Register</button>
         </div>
 
-        <img src="/src/img/kid2.jpg" alt="kid-login-photo" id="kid-login-photo" height="" />
+        <!-- <img src="/src/img/kid2.jpg" alt="kid-login-photo" id="kid-login-photo" height="" /> -->
     </main>
 
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
-
-    <script>
-        // Initialize Firebase
-        const config = {
-            apiKey: 'AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc',
-            authDomain: 'theeducators-ff916.firebaseapp.com',
-            projectId: 'theeducators-ff916',
-            storageBucket: 'theeducators-ff916.appspot.com',
-            messagingSenderId: '761524655097',
-            appId: '1:761524655097:web:cfa638d34c2d2e9320e328'
-        };
-        firebase.initializeApp(config);
-
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-
-            // db.settings({ timestampsInSnapshots: true });
-    </script>
-
-    <script src="login.js"></script>
+    <script type="module" src="login.js"></script>
 </body>
 
 </html>

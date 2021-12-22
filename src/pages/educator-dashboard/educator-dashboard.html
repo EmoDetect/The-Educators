@@ -58,18 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    const numb = document.querySelector('.numb');
-                    let counter = 0;
-                    setInterval(() => {
-                        if (counter == 100) {
-                            clearInterval();
-                        } else {
-                            counter += 1;
-                            // numb.textContent = counter + '%';
-                        }
-                    }, 80);
-                </script>
+                <script type="module" src="./loader.js"></script>
             </div>
 
             <section id="statistics-section" class="statistics-container">
@@ -121,38 +110,7 @@
         </footer>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
-
-    <script>
-        const config = {
-            apiKey: 'AIzaSyBt8tU1vFP5Y68gkLd5_ODlIybTtE7Iqnc',
-            authDomain: 'theeducators-ff916.firebaseapp.com',
-            projectId: 'theeducators-ff916',
-            storageBucket: 'theeducators-ff916.appspot.com',
-            messagingSenderId: '761524655097',
-            appId: '1:761524655097:web:cfa638d34c2d2e9320e328'
-        };
-        firebase.initializeApp(config);
-
-        firebase.auth().onAuthStateChanged(function (user) {
-            if (!user) {
-                window.location.href = '/src/pages/login/login.html';
-            }
-        });
-
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-
-        window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 0;
-            header.classList.toggle('scrolling-active', windowPosition);
-        });
-    </script>
-
-    <script>
+    <!-- <script>
         CSS.registerProperty({
             name: '--p',
             syntax: '<integer>',
@@ -160,11 +118,9 @@
             inherits: true
         });
 
+    </script> -->
 
-
-    </script>
-
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
