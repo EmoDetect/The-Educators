@@ -104,7 +104,7 @@ button {
 body {
     display: flex;
     align-items: center;
-    background: url('/src/img/background.jpg') center no-repeat;
+    background: url('/src/img/background.png') center no-repeat;
     background-size: cover;
 }
 
