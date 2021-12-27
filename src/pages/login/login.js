@@ -1,6 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
-import "initApp"
+// import "initApp"
 import db from "database"
 
 const user = localStorage.getItem('user');
@@ -9,11 +9,18 @@ const createNewAccountButton = document.querySelector('#new-account');
 
 createNewAccountButton.addEventListener('click', showRegisterForm);
 
-function showRegisterForm() {
-    const loginForm = document.getElementById('login-div');
+function showRegisterForm(event) {
+    event.stopPropagation();
+    event.preventDefault();
+
+    const loginDiv = document.getElementById('login-div');
+    const loginForm = document.getElementById('login-form');
+
     const registerForm = document.getElementById('register-div');
 
     loginForm.style.display = 'none';
+    //loginDiv.style.display = 'none';
+
     registerForm.style.display = 'block';
 };
 
